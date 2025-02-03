@@ -4,10 +4,51 @@ import { Button, Dropdown, Space } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
-
-
-
+import { useEffect, useState } from 'react';
 const Navbar = () => {
+
+  const [showSearch, setShowSearch] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [mainElementTop, setMainElementTop] = useState(0);
+
+  // Function to handle scroll events
+  const handleScroll = () => {
+    // Check if the page has scrolled past the <main> tag
+    if (window.scrollY >= mainElementTop) {
+      setIsNavbarVisible(true); // Navbar should be visible when past <main>
+    } else if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      // Scroll down - Hide navbar
+      setIsNavbarVisible(false);
+    } else if (window.scrollY < lastScrollY) {
+      // Scroll up - Show navbar
+      setIsNavbarVisible(true);
+    }
+
+    // Update last scroll position
+    setLastScrollY(window.scrollY);
+  };
+
+  // Hook to attach scroll event listener when component mounts
+  useEffect(() => {
+    // Find the position of the <main> tag
+    const mainElement = document.querySelector('main');
+    if (mainElement) {
+      setMainElementTop(mainElement.offsetTop);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
+  // Toggle the visibility of the search input
+  const toggleSearch = () => {
+    setShowSearch(!showSearch);
+  };
     
     const items = [
         {
