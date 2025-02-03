@@ -1,21 +1,50 @@
-import { Carousel } from "antd";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import Popularplace from '../../Component/Popularplace';
 
 const Home = () => {
     return (
-        <div>
+        <div className=''>
+            <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 5500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                effect="fade"
+                modules={[Autoplay, Pagination]}
+                className="mySwiper"
+            >
+                <SwiperSlide>
+                    <div className="relative">
+                        <img src="https://i.ibb.co/TBtdYr4T/slide-00.jpg" alt="" className="w-full h-full" />
+                        <div className="absolute inset-0 bg-black opacity-60"></div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="relative">
+                        <img src="https://i.ibb.co/WNS6T9Zv/slide-02.jpg" alt="" className="w-full h-full" />
+                        <div className="absolute inset-0 bg-black opacity-60"></div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="relative">
+                        <img src="https://i.ibb.co.com/gLdHjf0p/Veedo-Slider-1-1.jpg" alt="" className="w-full h-full" />
+                        <div className="absolute inset-0 bg-black opacity-60"></div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
             <div>
-            <Carousel autoplay>
-                <div>
-                <img src="https://i.ibb.co.com/4RYBj3sd/slide-00.jpg" alt="" />
-                </div>
-                <div>
-                <img className="h-[620px] w-full" src="https://i.ibb.co.com/zWyt9bT4/Veedo-Slider-1-1.jpg" alt="" />
-                </div>
-                <div>
-                <img src="https://i.ibb.co.com/q3p9j87n/slide-02.jpg" alt="" />
-                </div>
-            </Carousel>
-            <h2>Hello</h2>
+                <Popularplace></Popularplace>
             </div>
         </div>
     );

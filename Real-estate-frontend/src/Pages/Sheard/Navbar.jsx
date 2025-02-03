@@ -50,40 +50,35 @@ const Navbar = () => {
     </>
 
     return (
-        <div className=''>
-            <div className='max-w-full h-[100px] '>
-                <div className=' flex justify-between items-center px-12'>
-                    {/* Property Logo */}
+        <div className='sticky top-0 z-20 bg-white bg-opacity-75 backdrop-blur-sm'>
+            <div className=' max-w-full '>
+                <div className='flex justify-between h-[70px] shadow-xl w-full items-center px-12'>
                     <div className='w-[130px] ml-5 mt-1'>
                         <img src="/src/assets/logo3.png" alt="" />
                     </div>
 
-                    {/* Navlinks */}
-                    <div>
+                    <div className='ml-40'>
                         <ul className='menu-horizontal list-none flex gap-3'>
                             {navLinks}
                         </ul>
                     </div>
-
-                    {/* Authentication Button */}
-                    <div className='flex gap-5 list-none items-center'>
-                        <li className='flex gap-3 items-center text-lg text-[#ff4848]'><a href="#"><FontAwesomeIcon icon={faPhone} className='text-[#ff4848] text-lg' /> 1-333-345-6868</a></li>
-                        <li>
-                        <div className="dropdown  dropdown-end">
-                          <div tabIndex={0} role="button" className="avatar">
-                            <div className="">
-                              <FontAwesomeIcon className='text-4xl' icon={faCircleUser} />
+                    <div className='flex gap-5 list-none ml-32 items-center'>
+                      <div className='flex gap-3 items-center text-lg text-[#000]'><a href="#"><FontAwesomeIcon icon={faPhone} className='text-[#f1913d] text-lg' /> 1-333-345-6868</a></div>
+                          
+                      <div className="dropdown z-40 dropdown-end">
+                            <div tabIndex={0} role="button" className="avatar">
+                              <div className="">
+                                <FontAwesomeIcon className='text-4xl text-[#f1913d]' icon={faCircleUser} />
+                              </div>
                             </div>
-                          </div>
-                          <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-64 px-7 pt-3 p-2 shadow">
-                            <button className='px-10 font-medium py-2 rounded-lg bg-[#2c2e33] hover:bg-[#f1913d] text-white text-lg transition duration-700'>Login</button>
-                            <p className='text-center mt-3 font-medium'>Don't You Have an account?</p>
-                            <a href="#" className='text-center mt-3 mb-2 text-[#f1913d] underline text-base'>Registration</a>
-                          </ul>
-                        </div>
-                        </li>
+                            <ul
+                              tabIndex={0}
+                              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-64 px-7 pt-3 p-2 shadow">
+                              <button className='px-10 font-medium py-2 rounded-lg bg-[#2c2e33] hover:bg-[#f1913d] text-white text-lg transition duration-700'>Login</button>
+                              <p className='text-center mt-3 font-medium'>Don't You Have an account?</p>
+                              <a href="#" className='text-center mt-3 mb-2 text-[#f1913d] underline text-base'>Registration</a>
+                            </ul>
+                      </div>
                     </div>
                 </div>
             </div>
