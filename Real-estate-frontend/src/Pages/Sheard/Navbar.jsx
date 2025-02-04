@@ -91,7 +91,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className='sticky top-0 z-20 bg-white bg-opacity-75 backdrop-blur-sm'>
+        <div className='sticky top-0 z-30 bg-white bg-opacity-75 backdrop-blur-sm'>
             <div className=' max-w-full '>
                 <div className='flex justify-between h-[70px] shadow-xl w-full items-center px-12'>
                     <div className='w-[130px] ml-5 mt-1'>
@@ -115,7 +115,7 @@ const Navbar = () => {
                             <ul
                               tabIndex={0}
                               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-64 px-7 pt-3 p-2 shadow">
-                              <button className='px-10 font-medium py-2 rounded-lg bg-[#2c2e33] hover:bg-[#f1913d] text-white text-lg transition duration-700'>Login</button>
+                              <button className='px-10 font-medium py-2 rounded-lg bg-[#2c2e33] hover:bg-[#f1913d] text-white text-lg transition duration-700'><a href="/authcomponent">Login</a></button>
                               <p className='text-center mt-3 font-medium'>Don't You Have an account?</p>
                               <a href="#" className='text-center mt-3 mb-2 text-[#f1913d] underline text-base'>Registration</a>
                             </ul>
