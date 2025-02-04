@@ -8,6 +8,9 @@ import Contact from '../Pages/Contact/Contact';
 import About from '../Pages/About/About';
 import Service from '../Pages/Service/Service';
 import NewProperty from '../NewProperties/NewProperty';
+import Dashboard from '../Pages/Dashboard/Dashboard';
+import Gallery from '../Pages/Gallery/Gallery';
+import DashboardHome from '../Pages/Dashboard/DashboardPages/DashboardHome';
 
 const Router = createBrowserRouter([
     {
@@ -39,9 +42,23 @@ const Router = createBrowserRouter([
                 element: <NewProperty></NewProperty>
             },
             {
+                path: '/gallery',
+                element: <Gallery></Gallery>
+            },
+            {
                 path: '/contact',
                 element: <Contact></Contact>
             }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+            // {
+            //     path: '/',
+            //     element: <DashboardHome></DashboardHome>
+            // }
         ]
     }
 ])
