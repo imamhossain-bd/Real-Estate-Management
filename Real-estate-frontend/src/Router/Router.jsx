@@ -11,6 +11,7 @@ import NewProperty from '../NewProperties/NewProperty';
 import Gallery from '../Pages/Gallery/Gallery';
 import Dashboard from '../Dashboard/Dashboard';
 import AuthComponent from '@/Pages/Auth/AuthComponent';
+import DashboardSidebar from '@/Dashboard/DashboardPages/DashboardSidebar';
 
 const Router = createBrowserRouter([
     {
@@ -59,10 +60,10 @@ const Router = createBrowserRouter([
         path: '/dashboard',
         element: <Dashboard></Dashboard>,
         children: [
-            // {
-            //     path: '/',
-            //     element: <DashboardHome></DashboardHome>
-            // }
+            {
+                path: '/dashboardHome',
+                element: <DashboardSidebar></DashboardSidebar>
+            }
         ]
     }
 ])

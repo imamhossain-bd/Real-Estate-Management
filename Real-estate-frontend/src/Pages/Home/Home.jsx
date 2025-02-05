@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 import Popularplace from '../../Component/HomeComponent/Popularplace';
 import TodaySellProperty from '../../Component/HomeComponent/TodaySellProperty';
 
@@ -11,22 +12,24 @@ const Home = () => {
     return (
         <div className=''>
             <Swiper
+                loop={true}
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 5500,
+                    delay: 2000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
                     clickable: true,
                 }}
+                speed={1000}
                 effect="fade"
-                modules={[Autoplay, Pagination]}
+                modules={[Autoplay, Pagination, EffectFade]}
                 className="mySwiper">
                 
                 <SwiperSlide>
                     <div className="relative">
-                        <img src="https://i.ibb.co/TBtdYr4T/slide-00.jpg" alt="" className="w-full h-full" />
+                        <img src="https://i.ibb.co/TBtdYr4T/slide-00.jpg" alt="" className="zoom-effect w-full h-full" />
                         <div className="absolute inset-0 bg-black opacity-60"></div>
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                             <h2 className="text-4xl font-bold">Discover Amazing Places</h2>
@@ -37,7 +40,7 @@ const Home = () => {
 
                 <SwiperSlide>
                     <div className="relative">
-                        <img src="https://i.ibb.co/WNS6T9Zv/slide-02.jpg" alt="" className="w-full h-full" />
+                        <img src="https://i.ibb.co/WNS6T9Zv/slide-02.jpg" alt="" className="zoom-effect w-full h-full" />
                         <div className="absolute inset-0 bg-black opacity-60"></div>
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                             <h2 className="text-4xl font-bold">Experience New Adventures</h2>
@@ -48,7 +51,7 @@ const Home = () => {
 
                 <SwiperSlide>
                     <div className="relative">
-                        <img src="https://i.ibb.co.com/gLdHjf0p/Veedo-Slider-1-1.jpg" alt="" className="w-full h-full" />
+                        <img src="https://i.ibb.co.com/gLdHjf0p/Veedo-Slider-1-1.jpg" alt="" className="zoom-effect w-full h-full" />
                         <div className="absolute inset-0 bg-black opacity-60"></div>
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                             <h2 className="text-4xl font-bold">Your Dream Destination Awaits</h2>
