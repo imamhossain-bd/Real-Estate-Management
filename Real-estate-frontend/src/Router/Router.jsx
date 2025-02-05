@@ -9,9 +9,9 @@ import About from '../Pages/About/About';
 import Service from '../Pages/Service/Service';
 import NewProperty from '../NewProperties/NewProperty';
 import Gallery from '../Pages/Gallery/Gallery';
-import Dashboard from '../Dashboard/Dashboard';
 import AuthComponent from '@/Pages/Auth/AuthComponent';
-import DashboardSidebar from '@/Dashboard/DashboardPages/DashboardSidebar';
+import Layoutdashboard from '@/Dashboard/DashboardLayout/Layoutdashboard';
+import DashboardHome from '@/Dashboard/DashboardPages/DashboardHome/DashboardHome';
 
 const Router = createBrowserRouter([
     {
@@ -58,11 +58,11 @@ const Router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>,
+        element: <Layoutdashboard></Layoutdashboard>,
         children: [
             {
-                path: '/dashboardHome',
-                element: <DashboardSidebar></DashboardSidebar>
+                path: '/dashboardhome',
+                element: <DashboardHome></DashboardHome>
             }
         ]
     }
