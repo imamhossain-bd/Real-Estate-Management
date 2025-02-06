@@ -12,6 +12,7 @@ import Gallery from '../Pages/Gallery/Gallery';
 import AuthComponent from '@/Pages/Auth/AuthComponent';
 import Layoutdashboard from '@/Dashboard/DashboardLayout/Layoutdashboard';
 import DashboardHome from '@/Dashboard/DashboardPages/DashboardHome/DashboardHome';
+import DashboardProperty from '@/Dashboard/DashboardPages/DashboardProperty/DashboardProperty';
 
 const Router = createBrowserRouter([
     {
@@ -61,8 +62,12 @@ const Router = createBrowserRouter([
         element: <Layoutdashboard></Layoutdashboard>,
         children: [
             {
-                path: '/dashboardhome',
+                path: 'dashboardhome',
                 element: <DashboardHome></DashboardHome>
+            },
+            {
+                path: 'dashboardproperty',
+                element: <DashboardProperty></DashboardProperty>
             }
         ]
     }
