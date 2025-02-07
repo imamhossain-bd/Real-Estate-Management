@@ -216,3 +216,9 @@ form {
 	width: 40px;
 }
 
+
+
+
+#nav-toggle:checked + #sidebar{
+	width: 10px;
+}
