@@ -28,9 +28,9 @@ const Home = () => {
                 className="mySwiper">
                 
                 <SwiperSlide>
-                    <div className="relative">
-                        <img src="https://i.ibb.co/TBtdYr4T/slide-00.jpg" alt="" className="zoom-effect w-full h-full" />
-                        <div className="absolute inset-0 bg-black opacity-60"></div>
+                    <div className="relative h-[100vh]">
+                        <img src="https://i.ibb.co/TBtdYr4T/slide-00.jpg" alt="" className="zoom-effect w-full h-[100vh]" />
+                        <div className="absolute inset-0 bg-black opacity-60 h-[100vh]"></div>
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                             <h2 className="text-4xl font-bold">Discover Amazing Places</h2>
                             <p className="text-lg mt-2">Explore the world’s best locations with us.</p>
@@ -39,9 +39,9 @@ const Home = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <div className="relative">
-                        <img src="https://i.ibb.co/WNS6T9Zv/slide-02.jpg" alt="" className="zoom-effect w-full h-full" />
-                        <div className="absolute inset-0 bg-black opacity-60"></div>
+                    <div className="relative h-[100vh]">
+                        <img src="https://i.ibb.co/WNS6T9Zv/slide-02.jpg" alt="" className="zoom-effect w-full h-[100vh]" />
+                        <div className="absolute inset-0 bg-black opacity-60 h-[100vh]"></div>
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                             <h2 className="text-4xl font-bold">Experience New Adventures</h2>
                             <p className="text-lg mt-2">Let’s make your next journey unforgettable.</p>
@@ -50,9 +50,9 @@ const Home = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <div className="relative">
-                        <img src="https://i.ibb.co.com/gLdHjf0p/Veedo-Slider-1-1.jpg" alt="" className="zoom-effect w-full h-full" />
-                        <div className="absolute inset-0 bg-black opacity-60"></div>
+                    <div className="relative h-[100vh]">
+                        <img src="https://i.ibb.co.com/gLdHjf0p/Veedo-Slider-1-1.jpg" alt="" className="zoom-effect w-full h-[100vh]" />
+                        <div className="absolute inset-0 bg-black opacity-60 h-[100vh]"></div>
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                             <h2 className="text-4xl font-bold">Your Dream Destination Awaits</h2>
                             <p className="text-lg mt-2">Plan your trip with the best travel guides.</p>

@@ -7,9 +7,9 @@ const AuthComponent = () => {
     const [isSignUp, setIsSignUp] = useState(false);
 
     return (
-        <div className="flex items-center justify-center  min-h-screen bg-gray-100">
+        <div className="flex items-center justify-center  min-h-screen ">
             <div className={`container relative w-[768px] max-w-full h-[550px] bg-white rounded-lg shadow-lg  transition-all duration-500 ${isSignUp ? "right-panel-active" : ""}`} id="container">
-                
+            
                 {/* Sign Up Form */}
                 <div className="form-container sign-up-container absolute top-0 left-0 w-1/2 h-full flex flex-col items-center justify-center p-8">
                     <form action="#" className="pt-7">

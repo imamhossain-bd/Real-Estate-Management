@@ -2,54 +2,64 @@
 import { NavLink } from 'react-router-dom'
 import { Button, Dropdown, Space } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from 'react';
+import AuthComponent from '../Auth/AuthComponent';
+import { motion, AnimatePresence } from "framer-motion";
+
+
+
 const Navbar = () => {
 
-  const [showSearch, setShowSearch] = useState(false);
-  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [mainElementTop, setMainElementTop] = useState(0);
+  // const [showSearch, setShowSearch] = useState(false);
+  // const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  // const [lastScrollY, setLastScrollY] = useState(0);
+  // const [mainElementTop, setMainElementTop] = useState(0);
 
-  // Function to handle scroll events
-  const handleScroll = () => {
-    // Check if the page has scrolled past the <main> tag
-    if (window.scrollY >= mainElementTop) {
-      setIsNavbarVisible(true); // Navbar should be visible when past <main>
-    } else if (window.scrollY > lastScrollY && window.scrollY > 100) {
-      // Scroll down - Hide navbar
-      setIsNavbarVisible(false);
-    } else if (window.scrollY < lastScrollY) {
-      // Scroll up - Show navbar
-      setIsNavbarVisible(true);
-    }
+  // // Function to handle scroll events
+  // const handleScroll = () => {
+  //   // Check if the page has scrolled past the <main> tag
+  //   if (window.scrollY >= mainElementTop) {
+  //     setIsNavbarVisible(true); // Navbar should be visible when past <main>
+  //   } else if (window.scrollY > lastScrollY && window.scrollY > 100) {
+  //     // Scroll down - Hide navbar
+  //     setIsNavbarVisible(false);
+  //   } else if (window.scrollY < lastScrollY) {
+  //     // Scroll up - Show navbar
+  //     setIsNavbarVisible(true);
+  //   }
 
-    // Update last scroll position
-    setLastScrollY(window.scrollY);
-  };
+  //   // Update last scroll position
+  //   setLastScrollY(window.scrollY);
+  // };
 
   // Hook to attach scroll event listener when component mounts
-  useEffect(() => {
-    // Find the position of the <main> tag
-    const mainElement = document.querySelector('main');
-    if (mainElement) {
-      setMainElementTop(mainElement.offsetTop);
-    }
+  // useEffect(() => {
+  //   // Find the position of the <main> tag
+  //   const mainElement = document.querySelector('main');
+  //   if (mainElement) {
+  //     setMainElementTop(mainElement.offsetTop);
+  //   }
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollY]);
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [lastScrollY]);
 
-  // Toggle the visibility of the search input
-  const toggleSearch = () => {
-    setShowSearch(!showSearch);
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+
+  const openLoginModal = (e) => {
+      e.preventDefault();
+      setLoginModalOpen(true);
   };
-    
+
+  const closeLoginModal = () => {
+      setLoginModalOpen(false);
+  };
     const items = [
         {
           key: '1',
@@ -115,12 +125,44 @@ const Navbar = () => {
                             <ul
                               tabIndex={0}
                               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-64 px-7 pt-3 p-2 shadow">
-                              <button className='px-10 font-medium py-2 rounded-lg bg-[#2c2e33] hover:bg-[#f1913d] text-white text-lg transition duration-700'><a href="/authcomponent">Login</a></button>
+                              <button onClick={openLoginModal} className='px-10 font-medium py-2 rounded-lg bg-[#2c2e33] hover:bg-[#f1913d] text-white text-lg transition duration-700'><a href="">Login</a></button>
                               <p className='text-center mt-3 font-medium'>Don't You Have an account?</p>
-                              <a href="/authcomponent" className='text-center mt-3 mb-2 text-[#f1913d] underline text-base'>Registration</a>
+                              <a onClick={openLoginModal} href="/authcomponent" className='text-center mt-3 mb-2 text-[#f1913d] underline text-base'>Registration</a>
                             </ul>
                       </div>
                     </div>
+
+                    <AnimatePresence>
+                      {isLoginModalOpen && (
+
+                        <motion.div 
+                        key="modal" // Add a key for AnimatePresence
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+                        >
+                          <motion.div 
+                          initial={{ scale: 0.8, opacity: 0 }} // Initial scale and opacity for the modal
+                          animate={{ scale: 1, opacity: 1 }}
+                          exit={{ scale: 0.5, opacity: 0 }}
+                          transition={{ duration: 0.4, ease: "easeInOut" }}
+                          className="rounded-lg  relative" // Set width, adjust as needed
+                          >
+                              <div className="fixed pt-16 inset-0 bg-[#000] bg-opacity-50 transition-opacity duration-300 ease-in-out h-[100vh] flex items-center justify-center  z-50" style={{ opacity: isLoginModalOpen ? 1 : 0 }}> {/* Overlay */}
+                                <div className="rounded-lg  transform transition-transform duration-300 ease-in-out"  style={{ transform: isLoginModalOpen ? 'scale(1)' : 'scale(0.8)', opacity: isLoginModalOpen ? 1 : 0 }}> 
+                                <button className="absolute top-32 ml-[45rem] z-50 text-slate-700 hover:text-gray-700" onClick={closeLoginModal} >
+                                <FontAwesomeIcon className='text-2xl' icon={faXmark} />
+                                </button>
+                                  <AuthComponent setLoginModalOpen={setLoginModalOpen}></AuthComponent>
+                                  
+                                </div>
+                            </div>
+                          </motion.div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                 </div>
             </div>
         </div>
