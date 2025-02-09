@@ -2,7 +2,7 @@ import React from 'react';
 
 const DashboardProperty = () => {
     return (
-        <div>
+        <div className='pt-28'>
             <h2>Hello Dashboard Property</h2>
         </div>
     );

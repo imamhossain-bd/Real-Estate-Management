@@ -42,8 +42,8 @@ const NavbarDashboard = () => {
   }, []);
 
     return (
-        <div>
-            <div className='flex justify-between py-4 px-8 shadow-lg items-center w-[100%]'>
+        <div className='fixed bg-white bg-opacity-75 dark:bg-gray-700 z-10 backdrop-blur-sm w-[82%]'>
+            <div className='flex justify-between py-4 px-8 shadow-lg items-center'>
                 <div className="">
                     <div className="flex  justify-between items-center ">
                         <button id='nav-toggle' className="text-gray-700" >
@@ -121,13 +121,13 @@ const NavbarDashboard = () => {
                       </AnimatePresence>
                     </div>
                     {/* Setting button and Popup */}
-                    <div>
+                    <div className='z-30'>
                       <button onClick={() => setIsOpen(true)}><FontAwesomeIcon icon={faGear} className='text-2xl' /></button>
                        {/* Theme Settings Popup */}
                         <AnimatePresence>
                             {isOpen && (
                               <motion.div 
-                                className="fixed inset-0  bg-black z-40 bg-opacity-50 flex justify-end"
+                                className="fixed inset-0 bg-black h-[100vh] bg-opacity-50 flex justify-end"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
@@ -135,7 +135,7 @@ const NavbarDashboard = () => {
                               >
                                 {/* Theme Settings Popup */}
                                 <motion.div
-                                  className="w-80 bg-white h-full shadow-lg  rounded-l-xl p-5"
+                                  className="w-80 h-[100vh] bg-white  shadow-lg  rounded-l-xl p-5"
                                   initial={{ x: "100%" }}  // Start from outside the screen
                                   animate={{ x: 0 }}        // Slide in
                                   exit={{ x: "100%" }}      // Slide out

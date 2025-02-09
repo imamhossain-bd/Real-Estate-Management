@@ -7,12 +7,12 @@ import NavbarDashboard from '../DashboardPages/SheardDashboard/NavbarDashboard';
 
 const Layoutdashboard = () => {
     return (
-        <div className='dashboard-container flex justify-between'>
+        <div className='dashboard-container flex gap-[18rem] dark:bg-gray-700 justify-between'>
                 <DashboardSidebar></DashboardSidebar>
-                <div className='dashboard-content w-full'>
+                <div className='dashboard-content w-[100%]'>
                     <NavbarDashboard></NavbarDashboard>
                     <Outlet></Outlet>
-                </div>
+                </div>  
         </div>
     );
 };

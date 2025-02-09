@@ -83,7 +83,7 @@ const DashboardSidebar = () => {
 </>
     return (
         <div>
-            <div id="sidebar" className={`h-[100vh]  bg-gray-900 text-white w-72 p-5 transition-all duration-300`}>
+            <div id="sidebar" className={`h-[100vh] fixed bg-gray-900 text-white w-72 p-5 transition-all duration-300`}>
               <div className="flex items-center space-x-3">
                 <div className="bg-red-500 p-2 rounded-full">
                   <FaHome size={24} />
