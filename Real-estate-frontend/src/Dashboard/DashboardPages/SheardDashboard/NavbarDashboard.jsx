@@ -42,10 +42,10 @@ const NavbarDashboard = () => {
   }, []);
 
     return (
-        <div className='fixed bg-white bg-opacity-75 dark:bg-gray-700 z-10 backdrop-blur-sm w-[82%]'>
+        <div className='fixed bg-white bg-opacity-75 w-[100%] dark:bg-gray-700 z-10 backdrop-blur-sm '>
             <div className='flex justify-between py-4 px-8 shadow-lg items-center'>
                 <div className="">
-                    <div className="flex  justify-between items-center ">
+                    <div className="">
                         <button id='nav-toggle' className="text-gray-700" >
                             <FontAwesomeIcon icon={faBars} size='2x'/>
                         </button>
@@ -54,7 +54,7 @@ const NavbarDashboard = () => {
                 <div className=''>
                     <input type="text" placeholder="Search..." className="border outline-none px-3 py-2 w-72 rounded-lg " />
                 </div>
-                <div className='flex gap-8 items-center'>
+                <div className='flex mr-72 gap-8 items-center'>
                     <div>
                       <button onClick={() => setDarkMode(!darkMode)} className="text-2xl">
                         {darkMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
@@ -67,7 +67,7 @@ const NavbarDashboard = () => {
                         {isNotifOpen && (
                           <motion.div
                             ref={notifRef}
-                            className="absolute right-6 mt-7 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg"
+                            className="absolute right-[320px] mt-7 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg"
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
@@ -137,7 +137,7 @@ const NavbarDashboard = () => {
                                 <motion.div
                                   className="w-80 h-[100vh] bg-white  shadow-lg  rounded-l-xl p-5"
                                   initial={{ x: "100%" }}  // Start from outside the screen
-                                  animate={{ x: 0 }}        // Slide in
+                                  animate={{ x: -285 }}        // Slide in
                                   exit={{ x: "100%" }}      // Slide out
                                   transition={{ duration: 0.4, ease: "easeInOut" }}
                                 >

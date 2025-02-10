@@ -7,9 +7,9 @@ import NavbarDashboard from '../DashboardPages/SheardDashboard/NavbarDashboard';
 
 const Layoutdashboard = () => {
     return (
-        <div className='dashboard-container flex gap-[18rem] dark:bg-gray-700 justify-between'>
+        <div className='flex gap-[18rem] dark:bg-gray-700'>
                 <DashboardSidebar></DashboardSidebar>
-                <div className='dashboard-content w-[100%]'>
+                <div className=''>
                     <NavbarDashboard></NavbarDashboard>
                     <Outlet></Outlet>
                 </div>  

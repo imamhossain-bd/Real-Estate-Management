@@ -58,9 +58,75 @@ const DashboardHome = () => {
         { name: "Earnings", data: [16, 17, 15, 21, 18, 16, 19, 17, 18, 20, 19, 21] },
         { name: "Expenses", data: [16, 15, 17, 18, 16, 15, 18, 16, 17, 19, 16, 18] },
       ];
+
+
+    //   Transition Card Table
+
+    const transactions = [
+    {
+      id: "#201",
+      name: "Michael A. Miner",
+      invoice: "IN-4563",
+      date: "Dec 22, 2024",
+      amount: "$45,842",
+      method: "Mastercard",
+      status: "Completed",
+      statusColor: "bg-green-100 text-green-700",
+    },
+    {
+      id: "#202",
+      name: "Theresa T. Brose",
+      invoice: "IN-4563",
+      date: "Sep 13, 2024",
+      amount: "$78,483",
+      method: "Visa",
+      status: "Cancel",
+      statusColor: "bg-red-100 text-red-700",
+    },
+    {
+      id: "#203",
+      name: "James L. Erickson",
+      invoice: "IN-4563",
+      date: "Nov 18, 2023",
+      amount: "$83,644",
+      method: "Paypal",
+      status: "Completed",
+      statusColor: "bg-green-100 text-green-700",
+    },
+    {
+      id: "#204",
+      name: "Lily W. Wilson",
+      invoice: "IN-4563",
+      date: "Aug 24, 2024",
+      amount: "$94,305",
+      method: "Mastercard",
+      status: "Pending",
+      statusColor: "bg-yellow-100 text-yellow-700",
+    },
+    {
+      id: "#205",
+      name: "Sarah M. Brooks",
+      invoice: "IN-4563",
+      date: "Oct 13, 2024",
+      amount: "$42,561",
+      method: "Visa",
+      status: "Cancel",
+      statusColor: "bg-red-100 text-red-700",
+    },
+    {
+      id: "#206",
+      name: "Joe K. Hall",
+      invoice: "IN-4563",
+      date: "Jan 20, 2023",
+      amount: "$25,571",
+      method: "Paypal",
+      status: "Completed",
+      statusColor: "bg-green-100 text-green-700",
+    },
+  ];
     
     return (    
-        <div className='px-8 pt-32 w-[100%] '>
+        <div className='px-8 pt-28 w-[100%] '>
             {/* Card Of Toatal Agent, Property etc ........ */}
             <div className='flex gap-5 justify-between  items-center'>
                 <div className='flex-1 flex justify-between px-4 py-3  w-[17.6rem] bg-[#ececec] dark:bg-gray-800 rounded-lg shadow-md '>
@@ -142,9 +208,9 @@ const DashboardHome = () => {
             </div>
 
             {/* Sales Analytic */}
-            <div className='flex gap-4 mt-8 mb-5 justify-between'>
+            <div className='flex gap-8 mt-8 mb-5'>
                 <div>
-                    <div className="bg-[#ececec] dark:bg-gray-800 p-6 w-[50rem] h-40rem] rounded-lg shadow-md">
+                    <div className="bg-[#ececec] dark:bg-gray-800 p-6 w-[58rem] h-40rem] rounded-lg shadow-md">
                         <div className="flex justify-between items-center mb-4">
                             <h2 className="text-lg font-semibold text-gray-700 dark:text-white">Sales Analytic</h2>
                             <button className="text-sm bg-gray-100 px-3 py-1.5 rounded-md dark:bg-gray-700">This Month</button>
@@ -210,48 +276,108 @@ const DashboardHome = () => {
                             <div className='mt-14 ml-2'>
                                 <img className='w-[200px]' src="https://i.ibb.co.com/WNSvRt7G/money-Cn-A61d-Pw.png" alt="" />
                             </div>
+                            
                         </div>
-                    </div>
-                    <div>
-                        <div className="bg-white p-6 rounded-2xl shadow-md w-full max-w-lg mx-auto">
-                            <div className="grid grid-cols-2 gap-6">
-                                {/* Property Card */}
-                                <div className="flex flex-col items-center space-y-2">
-                                <div className="bg-purple-100 p-3 rounded-xl">
-                                    <Home className="text-purple-500 w-8 h-8" />
-                                </div>
-                                <h2 className="text-lg font-semibold text-gray-700">Property</h2>
-                                <p className="text-2xl font-bold">15,780</p>
-                                <p className="text-sm text-gray-500">60% Target</p>
-                                <div className="w-full h-2 bg-gray-200 rounded-full">
-                                    <div className="h-2 bg-purple-500 rounded-full w-[60%]"></div>
-                                </div>
+
+                        <div>
+                            <div className="bg-white p-6 mt-5 rounded-2xl shadow-md w-full max-w-lg mx-auto">
+                                <div className="grid grid-cols-2 gap-6">
+                                    {/* Property Card */}
+                                    <div className="flex flex-col items-center space-y-2">
+                                    <div className="bg-purple-100 p-3 rounded-xl">
+                                        <Home className="text-purple-500 w-8 h-8" />
+                                    </div>
+                                    <h2 className="text-lg font-semibold text-gray-700">Property</h2>
+                                    <p className="text-2xl font-bold">15,780</p>
+                                    <p className="text-sm text-gray-500">60% Target</p>
+                                    <div className="w-full h-2 bg-gray-200 rounded-full">
+                                        <div className="h-2 bg-purple-500 rounded-full w-[60%]"></div>
+                                    </div>
+                                    </div>
+
+                                    {/* Revenue Card */}
+                                    <div className="flex flex-col items-center space-y-2">
+                                    <div className="bg-green-100 p-3 rounded-xl">
+                                        <Briefcase className="text-green-500 w-8 h-8" />
+                                    </div>
+                                    <h2 className="text-lg font-semibold text-gray-700">Revenue</h2>
+                                    <p className="text-2xl font-bold">$78.3M</p>
+                                    <p className="text-sm text-gray-500">80% Target</p>
+                                    <div className="w-full h-2 bg-gray-200 rounded-full">
+                                        <div className="h-2 bg-green-500 rounded-full w-[80%]"></div>
+                                    </div>
+                                    </div>
                                 </div>
 
-                                {/* Revenue Card */}
-                                <div className="flex flex-col items-center space-y-2">
-                                <div className="bg-green-100 p-3 rounded-xl">
-                                    <Briefcase className="text-green-500 w-8 h-8" />
+                                {/* View More Button */}
+                                <div className="mt-4 text-center">
+                                    <a href="#" className="text-blue-500 font-semibold flex items-center justify-center gap-1">
+                                    View More →
+                                    </a>
                                 </div>
-                                <h2 className="text-lg font-semibold text-gray-700">Revenue</h2>
-                                <p className="text-2xl font-bold">$78.3M</p>
-                                <p className="text-sm text-gray-500">80% Target</p>
-                                <div className="w-full h-2 bg-gray-200 rounded-full">
-                                    <div className="h-2 bg-green-500 rounded-full w-[80%]"></div>
-                                </div>
-                                </div>
-                            </div>
-
-                            {/* View More Button */}
-                            <div className="mt-4 text-center">
-                                <a href="#" className="text-blue-500 font-semibold flex items-center justify-center gap-1">
-                                View More →
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                {/* Card And Map */}
+
+
+                {/* Card And Map */}
+
+                {/* Last Transition  */}
+
+                <div className="p-6 bg-white rounded-xl shadow-md">
+                    <h2 className="text-lg font-semibold mb-4">Latest Transactions</h2>
+                    <div className="overflow-x-auto">
+                        <table className="w-full border-collapse">
+                        <thead>
+                            <tr className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                            <th className="py-3 px-6 text-left">Purchase ID</th>
+                            <th className="py-3 px-6 text-left">Buyer Name</th>
+                            <th className="py-3 px-6 text-left">Invoice</th>
+                            <th className="py-3 px-6 text-left">Purchase Date</th>
+                            <th className="py-3 px-6 text-left">Total Amount</th>
+                            <th className="py-3 px-6 text-left">Payment Method</th>
+                            <th className="py-3 px-6 text-left">Payment Status</th>
+                            <th className="py-3 px-6 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-gray-600 text-sm font-light">
+                            {transactions.map((tx) => (
+                            <tr key={tx.id} className="border-b border-gray-200 hover:bg-gray-50">
+                                <td className="py-3 px-6">{tx.id}</td>
+                                <td className="py-3 px-6">{tx.name}</td>
+                                <td className="py-3 px-6">{tx.invoice}</td>
+                                <td className="py-3 px-6">{tx.date}</td>
+                                <td className="py-3 px-6">{tx.amount}</td>
+                                <td className="py-3 px-6">{tx.method}</td>
+                                <td className="py-3 px-6">
+                                <span className={`px-3 py-1 text-xs rounded-full ${tx.statusColor}`}>
+                                    {tx.status}
+                                </span>
+                                </td>
+                                <td className="py-3 px-6 flex justify-center space-x-2">
+                                <button className="text-gray-500 hover:text-gray-700">
+                                    👁️
+                                </button>
+                                <button className="text-purple-500 hover:text-purple-700">
+                                    ✏️
+                                </button>
+                                <button className="text-red-500 hover:text-red-700">
+                                    🗑️
+                                </button>
+                                </td>
+                            </tr>
+                            ))}
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                {/* Last Transition  */}
+
+                
+        </div>
     );
 };
 
