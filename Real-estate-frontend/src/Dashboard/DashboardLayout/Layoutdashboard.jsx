@@ -9,7 +9,7 @@ const Layoutdashboard = () => {
     return (
         <div className='flex gap-[18rem] dark:bg-gray-700'>
                 <DashboardSidebar></DashboardSidebar>
-                <div className=''>
+                <div>
                     <NavbarDashboard></NavbarDashboard>
                     <Outlet></Outlet>
                 </div>  

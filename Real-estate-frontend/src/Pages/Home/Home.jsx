@@ -6,9 +6,25 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import Popularplace from '../../Component/HomeComponent/Popularplace';
 import TodaySellProperty from '../../Component/HomeComponent/TodaySellProperty';
+import DashPropertyDetails from '@/Dashboard/DashboardPages/DashboardProperty/DashPropertyDetails';
+import { useEffect, useState } from 'react';
 
 
 const Home = () => {
+    const [property,  setProperty] = useState([]);
+
+     useEffect(() => {
+            const fackData = async() =>{
+    
+                const res = await fetch("/FackData.json")
+                const data = await res.json()
+                setProperty(data);
+                console.log(data);
+            };
+    
+            fackData();
+        }, [])
+
     return (
         <div className=''>
             <Swiper
@@ -26,7 +42,7 @@ const Home = () => {
                 effect="fade"
                 modules={[Autoplay, Pagination, EffectFade]}
                 className="mySwiper">
-                
+
                 <SwiperSlide>
                     <div className="relative h-[100vh]">
                         <img src="https://i.ibb.co/TBtdYr4T/slide-00.jpg" alt="" className="zoom-effect w-full h-[100vh]" />
@@ -67,6 +83,14 @@ const Home = () => {
             </div>
             <div>
                 <TodaySellProperty></TodaySellProperty>
+            </div>
+            <div className='px-10 mt-9 mb-10'>
+                <h2></h2>
+                <div className='grid grid-cols-4 gap-9'>
+                    {
+                        property.map((propData) => (<DashPropertyDetails key={propData.id} propData={propData}></DashPropertyDetails>))
+                    }
+                </div>
             </div>
         </div>
     );

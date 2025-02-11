@@ -21,13 +21,19 @@ const DashboardSidebar = () => {
       </NavLink>
   </li>
   <li className="hover:bg-gray-800 mb-2 p-2 gap-2 rounded-md flex items-center space-x-2 cursor-pointer">
-      <NavLink to={'/'} className="flex items-center">
+      <NavLink to={'dashaddproperty'} className="flex items-center">
+          <FaUserTie />
+          <span className="ml-5">Add Property</span>
+      </NavLink>
+  </li>
+  <li className="hover:bg-gray-800 mb-2 p-2 gap-2 rounded-md flex items-center space-x-2 cursor-pointer">
+      <NavLink to={'dashagents'} className="flex items-center">
           <FaUsers />
           <span className="ml-5">Agents</span>
       </NavLink>
   </li>
   <li className="hover:bg-gray-800 mb-2 p-2 gap-2 rounded-md flex items-center space-x-2 cursor-pointer">
-      <NavLink to={'/'} className="flex items-center">
+      <NavLink to={'dashcustomar'} className="flex items-center">
           <FaUsers />
           <span className="ml-5">Customers</span>
       </NavLink>

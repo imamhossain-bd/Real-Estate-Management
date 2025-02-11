@@ -13,6 +13,9 @@ import AuthComponent from '@/Pages/Auth/AuthComponent';
 import Layoutdashboard from '@/Dashboard/DashboardLayout/Layoutdashboard';
 import DashboardHome from '@/Dashboard/DashboardPages/DashboardHome/DashboardHome';
 import DashboardProperty from '@/Dashboard/DashboardPages/DashboardProperty/DashboardProperty';
+import DashAddPropert from '@/Dashboard/DashboardPages/DashAddProperty/DashAddPropert';
+import DashAgents from '@/Dashboard/DashboardPages/DashAgents/DashAgents';
+import DashCustomar from '@/Dashboard/DashboardPages/DashCustomar/DashCustomar';
 
 const Router = createBrowserRouter([
     {
@@ -68,6 +71,18 @@ const Router = createBrowserRouter([
             {
                 path: 'dashboardproperty',
                 element: <DashboardProperty></DashboardProperty>
+            },
+            {
+                path: 'dashaddproperty',
+                element: <DashAddPropert></DashAddPropert>
+            },
+            {
+                path: 'dashagents',
+                element: <DashAgents></DashAgents>
+            },
+            {
+                path: 'dashcustomar',
+                element: <DashCustomar></DashCustomar>
             }
         ]
     }

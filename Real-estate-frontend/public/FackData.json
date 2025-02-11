@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "Luxury Villa",
+    "location": "Los Angeles, CA",
+    "beds": 5,
+    "bathroom": 4,
+    "feet": 4500,
+    "price": 1250000,
+    "status": "Sale",
+    "image": "../src/assets/p-1-BQ0X_fIz.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Cozy Apartment",
+    "location": "New York, NY",
+    "beds": 2,
+    "bathroom": 1,
+    "feet": 900,
+    "price": 2500,
+    "status": "Rent",
+    "image": "../src/assets/p-2-DzlMFwfd.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Modern Townhouse",
+    "location": "Seattle, WA",
+    "beds": 3,
+    "bathroom": 2,
+    "feet": 1800,
+    "price": 675000,
+    "status": "Sale",
+    "image": "../src/assets/p-3-CYB7E841.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Beachfront Condo",
+    "location": "Miami, FL",
+    "beds": 2,
+    "bathroom": 2,
+    "feet": 1200,
+    "price": 3200,
+    "status": "Rent",
+    "image": "../src/assets/p-4-BayuI12Z.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Country Cottage",
+    "location": "Nashville, TN",
+    "beds": 4,
+    "bathroom": 3,
+    "feet": 2500,
+    "price": 450000,
+    "status": "Sale",
+    "image": "../src/assets/p-5-C9ps3IeY.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Penthouse Suite",
+    "location": "Chicago, IL",
+    "beds": 3,
+    "bathroom": 3,
+    "feet": 2300,
+    "price": 5000,
+    "status": "Rent",
+    "image": "../src/assets/p-6-Dklg0-Jq.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Mountain Cabin",
+    "location": "Denver, CO",
+    "beds": 3,
+    "bathroom": 2,
+    "feet": 2000,
+    "price": 580000,
+    "status": "Sale",
+    "image": "../src/assets/p-7-B5lvQNhp.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Downtown Studio",
+    "location": "San Francisco, CA",
+    "beds": 1,
+    "bathroom": 1,
+    "feet": 600,
+    "price": 2200,
+    "status": "Rent",
+    "image": "../src/assets/p-8-BYeoXDXu.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Suburban Home",
+    "location": "Austin, TX",
+    "beds": 4,
+    "bathroom": 3,
+    "feet": 3200,
+    "price": 750000,
+    "status": "Sale",
+    "image": "../src/assets/p-9-C3rr_g2o.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Eco-Friendly Home",
+    "location": "Portland, OR",
+    "beds": 3,
+    "bathroom": 2,
+    "feet": 2100,
+    "price": 590000,
+    "status": "Sale",
+    "image": "../src/assets/p-10-BDuHOjBg.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Riverside Retreat",
+    "location": "Sacramento, CA",
+    "beds": 5,
+    "bathroom": 4,
+    "feet": 4000,
+    "price": 850000,
+    "status": "Sale",
+    "image": "../src/assets/p-1-BQ0X_fIz.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Farmhouse Estate",
+    "location": "Lexington, KY",
+    "beds": 6,
+    "bathroom": 5,
+    "feet": 5000,
+    "price": 1200000,
+    "status": "Sale",
+    "image": "../src/assets/p-2-DzlMFwfd.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Tiny Home",
+    "location": "Boise, ID",
+    "beds": 1,
+    "bathroom": 1,
+    "feet": 400,
+    "price": 1400,
+    "status": "Rent",
+    "image": "../src/assets/p-3-CYB7E841.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Historic Mansion",
+    "location": "Boston, MA",
+    "beds": 7,
+    "bathroom": 6,
+    "feet": 7000,
+    "price": 2500000,
+    "status": "Sale",
+    "image": "../src/assets/p-4-BayuI12Z.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Skyscraper Apartment",
+    "location": "Houston, TX",
+    "beds": 2,
+    "bathroom": 2,
+    "feet": 1400,
+    "price": 2800,
+    "status": "Rent",
+    "image": "../src/assets/p-5-C9ps3IeY.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Desert Villa",
+    "location": "Phoenix, AZ",
+    "beds": 4,
+    "bathroom": 3,
+    "feet": 2800,
+    "price": 700000,
+    "status": "Sale",
+    "image": "../src/assets/p-6-Dklg0-Jq.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Lakehouse",
+    "location": "Minneapolis, MN",
+    "beds": 3,
+    "bathroom": 2,
+    "feet": 2600,
+    "price": 620000,
+    "status": "Sale",
+    "image": "../src/assets/p-7-B5lvQNhp.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Modern Loft",
+    "location": "Atlanta, GA",
+    "beds": 2,
+    "bathroom": 2,
+    "feet": 1600,
+    "price": 3100,
+    "status": "Rent",
+    "image": "../src/assets/p-8-BYeoXDXu.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Seaside Bungalow",
+    "location": "San Diego, CA",
+    "beds": 3,
+    "bathroom": 2,
+    "feet": 1900,
+    "price": 3600,
+    "status": "Rent",
+    "image": "../src/assets/p-9-C3rr_g2o.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Ski Resort Cabin",
+    "location": "Aspen, CO",
+    "beds": 4,
+    "bathroom": 3,
+    "feet": 3100,
+    "price": 990000,
+    "status": "Sale",
+    "image": "../src/assets/p-10-BDuHOjBg.jpg"
+  }
+]

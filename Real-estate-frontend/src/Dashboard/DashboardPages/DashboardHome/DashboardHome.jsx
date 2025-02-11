@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp, faArrowDown, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp, faArrowDown, faMoneyBill, faUsers } from "@fortawesome/free-solid-svg-icons";
 import Chart from "react-apexcharts";
 import { Home, Briefcase } from "lucide-react";
 
@@ -124,6 +124,8 @@ const DashboardHome = () => {
       statusColor: "bg-green-100 text-green-700",
     },
   ];
+
+
     
     return (    
         <div className='px-8 pt-28 w-[100%] '>
@@ -321,12 +323,62 @@ const DashboardHome = () => {
                 </div>
                 {/* Card And Map */}
 
+                    <div className='flex justify-between items-center mt-10 mb-6'>
+                        {/* Buyers Card */}
+                        <div class="w-80 bg-[#ececec] rounded-lg shadow p-4">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Social Source</h3>
+                                <p class="text-sm text-gray-500">Total Traffic In This Week</p>
+                                </div>
+                                <div class="relative">
+                                <button class="text-sm text-gray-500 focus:outline-none">
+                                    This Month 
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Last 7 Days</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Last 30 Days</a>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="relative w-48 h-48 mx-auto mb-4">
+                                <svg class="w-full h-full" viewBox="0 0 160 160">
+                                <circle cx="80" cy="80" r="70" stroke="#e2e8f0" stroke-width="10" fill="none" />
+                                <circle cx="80" cy="80" r="70" stroke="#6366f1" stroke-width="10" fill="none" stroke-dasharray="440" stroke-dashoffset="110" /> 
+                                {/* 440 is the circumference (2 * pi * 70), 110 is 25% */}
+                                </svg>
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                                <p class="text-gray-800 text-lg font-bold">Total Buyer</p>
+                                <p class="text-2xl font-bold text-gray-800">70%</p>
+                                </div>
+                            </div>
+
+                            <div class="text-lg mb-6">
+                                <p class="text-[#000] font-semibold"><FontAwesomeIcon icon={faUsers} className='text-lg' /> Buyers: <span className='text-[#6058e8] text-lg font-bold'>70</span></p>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-800 focus:outline-none">
+                                See More Statistic
+                                </a>
+                                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md focus:outline-none">
+                                See Details
+                                </button>
+                            </div>
+                        </div>
+                        {/* Buyer Map */}
+                        
+                    </div>
 
                 {/* Card And Map */}
 
                 {/* Last Transition  */}
 
-                <div className="p-6 bg-white rounded-xl shadow-md">
+                <div className="p-6 bg-white rounded-xl shadow-md mb-10">
                     <h2 className="text-lg font-semibold mb-4">Latest Transactions</h2>
                     <div className="overflow-x-auto">
                         <table className="w-full border-collapse">
