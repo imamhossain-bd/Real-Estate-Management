@@ -3,6 +3,8 @@ import { FaHome, FaUserTie, FaUsers, FaShoppingCart, FaExchangeAlt, FaStar, FaEn
 import { NavLink } from "react-router-dom";
 import { Menu } from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserPlus, faBuilding } from '@fortawesome/free-solid-svg-icons';
 
 
 const DashboardSidebar = () => {
@@ -22,7 +24,7 @@ const DashboardSidebar = () => {
   </li>
   <li className="hover:bg-gray-800 mb-2 p-2 gap-2 rounded-md flex items-center space-x-2 cursor-pointer">
       <NavLink to={'dashaddproperty'} className="flex items-center">
-          <FaUserTie />
+      <FontAwesomeIcon icon={faBuilding} />
           <span className="ml-5">Add Property</span>
       </NavLink>
   </li>
@@ -89,7 +91,7 @@ const DashboardSidebar = () => {
 </>
     return (
         <div>
-            <div id="sidebar" className={`h-[100vh] fixed bg-gray-900 text-white w-72 p-5 transition-all duration-300`}>
+            <div id="sidebar" className={`h-[100vh] fixed bg-gray-900  text-white w-72 p-5 transition-all duration-300`}>
               <div className="flex items-center space-x-3">
                 <div className="bg-red-500 p-2 rounded-full">
                   <FaHome size={24} />
@@ -97,7 +99,7 @@ const DashboardSidebar = () => {
                 <h1 className="text-xl font-bold">Lahomes</h1>
               </div>
               <p className="text-gray-400 mt-8 mb-5 text-base">MENU</p>
-              <ul className="text-lg" >
+              <ul className="text-lg overflow-y-scroll" >
                 {navLinks}
               </ul>
             </div>
