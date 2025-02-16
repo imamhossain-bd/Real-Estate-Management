@@ -7,10 +7,18 @@ import 'swiper/css/effect-fade';
 import Popularplace from '../../Component/HomeComponent/Popularplace';
 import TodaySellProperty from '../../Component/HomeComponent/TodaySellProperty';
 import DashPropertyDetails from '@/Dashboard/DashboardPages/DashboardProperty/DashPropertyDetails';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useInView } from "framer-motion";
 
 
 const Home = () => {
+
+
+    
+    const ref = useRef(null);
+    const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
+
+
     return (
         <div className=''>
             <Swiper
@@ -63,13 +71,19 @@ const Home = () => {
                 </SwiperSlide>
 
             </Swiper>
-
+            
             <div>
                 <Popularplace></Popularplace>
             </div>
+            <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: "easeOut" }}>
             <div>
                 <TodaySellProperty></TodaySellProperty>
             </div>
+            </motion.div>
             <div className='px-10 mt-9 mb-10'>
                 
             </div>
