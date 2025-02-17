@@ -10,10 +10,10 @@ const AllPropertyDetails = ({ pasProperty }) => {
           <span className="absolute top-2 left-2 bg-purple-600 text-white text-xs px-3 py-1 rounded-full">
             {status}
           </span>
-          <button className="absolute top-2 right-2 border text-white px-3 font-bold py-[6px] text-2xl rounded-full shadow-md">
+          <button className="absolute top-2 right-6 border text-white px-[14px] font-bold py-[6px] text-2xl rounded-full shadow-md">
             ♡
           </button>
-          <div className="absolute right-5 h-12 w-12 top-[11rem] z-30 rounded-full border">
+          <div className="absolute right-5 h-12 w-12 top-[11.5rem] z-30 rounded-full border">
                <img className="rounded-full" src={owner_pic} alt="owner Pic" />
           </div>
         </div>
