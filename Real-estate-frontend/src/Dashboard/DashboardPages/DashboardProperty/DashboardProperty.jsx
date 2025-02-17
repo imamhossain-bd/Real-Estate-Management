@@ -111,7 +111,7 @@ const DashboardProperty = () => {
             const res = await fetch("/FackData.json")
             const data = await res.json()
             setProperty(data);
-            console.log(data);
+            // console.log(data);
         };
 
         fackData();

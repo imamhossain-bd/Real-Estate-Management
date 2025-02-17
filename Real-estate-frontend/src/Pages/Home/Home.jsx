@@ -9,6 +9,7 @@ import TodaySellProperty from '../../Component/HomeComponent/TodaySellProperty';
 import DashPropertyDetails from '@/Dashboard/DashboardPages/DashboardProperty/DashPropertyDetails';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from "framer-motion";
+import AllProperty from '@/Component/HomeComponent/AllProperty';
 
 
 const Home = () => {
@@ -75,6 +76,7 @@ const Home = () => {
             <div>
                 <Popularplace></Popularplace>
             </div>
+
             <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 40 }}
@@ -84,8 +86,9 @@ const Home = () => {
                 <TodaySellProperty></TodaySellProperty>
             </div>
             </motion.div>
+
             <div className='px-10 mt-9 mb-10'>
-                
+                <AllProperty></AllProperty>
             </div>
         </div>
     );

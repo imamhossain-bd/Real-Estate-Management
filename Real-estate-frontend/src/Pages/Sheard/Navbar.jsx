@@ -141,22 +141,19 @@ const Navbar = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
-                        >
-                          <motion.div 
+                        className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                        <motion.div 
                           initial={{ scale: 0.8, opacity: 0 }} // Initial scale and opacity for the modal
                           animate={{ scale: 1, opacity: 1 }}
                           exit={{ scale: 0.5, opacity: 0 }}
                           transition={{ duration: 0.4, ease: "easeInOut" }}
-                          className="rounded-lg  relative" // Set width, adjust as needed
-                          >
+                          className="rounded-lg  relative">
                               <div className="fixed pt-16 inset-0 bg-[#000] bg-opacity-50 transition-opacity duration-300 ease-in-out h-[100vh] flex items-center justify-center  z-50" style={{ opacity: isLoginModalOpen ? 1 : 0 }}> {/* Overlay */}
                                 <div className="rounded-lg  transform transition-transform duration-300 ease-in-out"  style={{ transform: isLoginModalOpen ? 'scale(1)' : 'scale(0.8)', opacity: isLoginModalOpen ? 1 : 0 }}> 
-                                <button className="absolute top-32 ml-[45rem] z-50 text-slate-700 hover:text-gray-700" onClick={closeLoginModal} >
-                                <FontAwesomeIcon className='text-2xl' icon={faXmark} />
+                                <button className="absolute lg:top-44 lg:ml-[45rem] z-50 text-slate-700 hover:text-gray-700" onClick={closeLoginModal} >
+                                  <FontAwesomeIcon className='text-2xl' icon={faXmark} />
                                 </button>
                                   <AuthComponent setLoginModalOpen={setLoginModalOpen}></AuthComponent>
-                                  
                                 </div>
                             </div>
                           </motion.div>
