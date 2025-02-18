@@ -39,7 +39,7 @@
     "category": "House",
     "status": "Sell",
     "sqft": 3200,
-    "owner_pic": "https://example.com/owners/owner3.jpg"
+    "owner_pic": "../src/assets/avatar-05.webp"
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@
     "category": "Studio",
     "status": "Rent",
     "sqft": 600,
-    "owner_pic": "https://example.com/owners/owner4.jpg"
+    "owner_pic": "../src/assets/avatar-06.webp"
   },
   {
     "id": 5,
@@ -67,7 +67,7 @@
     "category": "House",
     "status": "Sell",
     "sqft": 2800,
-    "owner_pic": "https://example.com/owners/owner5.jpg"
+    "owner_pic": "../src/assets/avatar-07.webp"
   },
   {
     "id": 6,
@@ -81,6 +81,6 @@
     "category": "Penthouse",
     "status": "Rent",
     "sqft": 2000,
-    "owner_pic": "https://example.com/owners/owner6.jpg"
+    "owner_pic": "../src/assets/avatar-03.webp"
   }
 ]
