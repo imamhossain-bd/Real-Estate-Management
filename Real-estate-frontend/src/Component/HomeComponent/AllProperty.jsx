@@ -26,7 +26,7 @@ const AllProperty = () => {
                     <h2 className='text-4xl font-bold'>Featured Listings</h2>
                     <p className='mt-3'>Highlight the best of your properties by using the List Category shortcode. You can list <br /> specific properties categories, types, cities, areas.</p>
                 </div>
-                <div className='grid grid-cols-3 px-[5rem] ml-14 gap-y-3'>
+                <div className='grid grid-cols-3  px-[5rem] gap-10 '>
                     {
                         homeProperty.map((hpro) => <AllPropertyDetails key={hpro.id} pasProperty = {hpro} ></AllPropertyDetails> )
                     }
