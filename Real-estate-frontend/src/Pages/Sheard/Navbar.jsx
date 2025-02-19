@@ -150,7 +150,7 @@ const Navbar = () => {
                           className="rounded-lg  relative">
                               <div className="fixed pt-16 inset-0 bg-[#000] bg-opacity-50 transition-opacity duration-300 ease-in-out h-[100vh] flex items-center justify-center  z-50" style={{ opacity: isLoginModalOpen ? 1 : 0 }}> {/* Overlay */}
                                 <div className="rounded-lg  transform transition-transform duration-300 ease-in-out"  style={{ transform: isLoginModalOpen ? 'scale(1)' : 'scale(0.8)', opacity: isLoginModalOpen ? 1 : 0 }}> 
-                                <button className="absolute lg:top-44 lg:ml-[45rem] z-50 text-slate-700 hover:text-gray-700" onClick={closeLoginModal} >
+                                <button className="absolute top-36 lg:ml-[45rem] z-50 text-slate-700 hover:text-gray-700" onClick={closeLoginModal} >
                                   <FontAwesomeIcon className='text-2xl' icon={faXmark} />
                                 </button>
                                   <AuthComponent setLoginModalOpen={setLoginModalOpen}></AuthComponent>

@@ -10,6 +10,9 @@ import DashPropertyDetails from '@/Dashboard/DashboardPages/DashboardProperty/Da
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from "framer-motion";
 import AllProperty from '@/Component/HomeComponent/AllProperty';
+import RecentPost from '@/Component/HomeComponent/RecentPost';
+import PropertyProcess from '@/Component/HomeComponent/PropertyProcess';
+import ApartmentMap from '@/Component/HomeComponent/ApartmentMap';
 
 
 const Home = () => {
@@ -89,6 +92,18 @@ const Home = () => {
 
             <div className='px-10 mt-9 mb-10'>
                 <AllProperty></AllProperty>
+            </div>
+
+            <div>
+                <RecentPost></RecentPost>
+            </div>
+
+            <div>
+                <PropertyProcess></PropertyProcess>
+            </div>
+
+            <div>
+                <ApartmentMap></ApartmentMap>
             </div>
         </div>
     );

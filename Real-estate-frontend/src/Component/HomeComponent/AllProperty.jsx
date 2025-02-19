@@ -22,7 +22,7 @@ const AllProperty = () => {
         <div>
             <div className='px-14 py-5'>
                 <div className='text-center'>
-                    <p className='py-1 m-auto rounded-full text-center w-[110px] bg-[#ffeeeb] text-[#ff6d52] mb-3 font-medium text-base'>Property : {homeProperty.length}</p>
+                    <p className='py-1 m-auto rounded-full text-center w-[110px] bg-[#ffeeeb] text-[#ff6d52] mb-3 font-medium text-base'>Property</p>
                     <h2 className='text-4xl font-bold'>Featured Listings</h2>
                     <p className='mt-3'>Highlight the best of your properties by using the List Category shortcode. You can list <br /> specific properties categories, types, cities, areas.</p>
                 </div>
