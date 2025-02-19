@@ -30,12 +30,12 @@ const AllPropertyDetails = ({ pasProperty }) => {
             <span className="ml-2 text-gray-600 text-sm">{rating} (28 Reviews)</span>
           </div>
           <a href="#" className="text-lg font-bold mt-6 hover:text-[#f56200] ">{name}</a>
-          <p className="text-gray-600 mt-4 text-sm">
+            <p className="text-gray-600 mt-4 text-sm">
             📍 {address}
           </p>
           <div className="flex items-center justify-between bg-gray-100 p-2 mt-5 rounded-lg text-sm text-gray-600">
-            <span>🛏 {bed}</span>
-            <span>🛁 {bathroom}</span>
+            <span>🛏 {bed} Bed</span>
+            <span>🛁 {bathroom} Bathroom</span>
             <span>📏 {sqft} Sqft</span>
           </div>
           <div className="flex justify-between text-sm mb-5 mt-5 text-gray-500">

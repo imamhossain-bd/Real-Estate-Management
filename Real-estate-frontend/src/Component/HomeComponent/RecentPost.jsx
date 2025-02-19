@@ -27,7 +27,7 @@ const RecentPost = () => {
                     <hr className='mt-5 w-20 border-2 border-orange-700 m-auto' />
                 </div>
 
-                <div className='flex gap-14 ml-[7.5rem] mb-10'>
+                <div className='flex gap-14 pl-[14rem] mb-10'>
                     {/* Post Number 1 */}
                     <motion.div variants={cardVariantsLeft} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                         <div className='mt-5 w-[350px] shadow-lg rounded-lg overflow-hidden cursor-pointer'>

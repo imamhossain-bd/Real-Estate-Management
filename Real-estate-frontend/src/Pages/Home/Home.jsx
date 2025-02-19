@@ -13,6 +13,7 @@ import AllProperty from '@/Component/HomeComponent/AllProperty';
 import RecentPost from '@/Component/HomeComponent/RecentPost';
 import PropertyProcess from '@/Component/HomeComponent/PropertyProcess';
 import ApartmentMap from '@/Component/HomeComponent/ApartmentMap';
+import OurClient from '@/Component/HomeComponent/OurClient';
 
 
 const Home = () => {
@@ -104,6 +105,10 @@ const Home = () => {
 
             <div>
                 <ApartmentMap></ApartmentMap>
+            </div>
+
+            <div>
+                <OurClient></OurClient>
             </div>
         </div>
     );

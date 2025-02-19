@@ -6,13 +6,13 @@ const tabs = [
     {
         id: "deluxe", label: "Deluxe Portion",
         content: (
-            <div className="w-full flex gap-8 mx-auto p-6 bg-white rounded-lg">
+            <div className="w-full flex gap-8 justify-between px-24 mx-auto p-6 bg-[#fff] rounded-lg">
                 <div>
                     <h2 className="text-2xl font-semibold">Deluxe Portion</h2>
                     <p className="text-gray-600 mt-2">
                     Quisque ultricies eros vel laoreet malesuada. Phasellus aliquam augue elit, <br /> nec porttitor purus fringilla ac. Suspendisse ac ex pharetra, semper orci at, <br /> porttitor purus. Duis fringilla dolor ut ante sagittis condimentum.
                     </p>
-                    <div className="bg-blue-900 mt-7 text-white p-4 w-[550px] font-semibold text-xl mt-4 rounded-lg">
+                    <div className="bg-blue-900 mt-12 text-white p-4 w-[550px] font-semibold text-xl rounded-lg">
                         <div className="flex justify-between border-b border-white py-2">
                             <span>Total Area</span>
                             <span>2400 Sq.ft</span>
@@ -36,15 +36,155 @@ const tabs = [
                     </div>
                 </div>
                 <div>
-                    <img className="w-[60rem]" src="https://i.ibb.co.com/nM0Xn9DY/sketch-property.webp" alt="" />
+                    <img className="w-[35rem]" src="https://i.ibb.co.com/nM0Xn9DY/sketch-property.webp" alt="" />
                 </div>
             </div>
         ),
     },
-    { id: "penthouse", label: "Penthouse", content: "Phasellus aliquam augue elit, nec porttitor purus fringilla ac. Suspendisse ac ex pharetra, semper orci at." },
-    { id: "top-garden", label: "Top Garden", content: "Suspendisse ac ex pharetra, semper orci at, porttitor purus. Duis fringilla dolor ut ante sagittis condimentum." },
-    { id: "double-height", label: "Double Height", content: "Duis fringilla dolor ut ante sagittis condimentum. Vestibulum venenatis turpis at odio tincidunt, nec elementum lorem auctor." },
-    { id: "studio", label: "The Studio", content: "Vestibulum venenatis turpis at odio tincidunt, nec elementum lorem auctor. Nam euismod sapien eget quam volutpat, vel euismod felis dictum." }
+    { id: "penthouse", label: "Penthouse", 
+        content: (
+            <div className="w-full flex gap-8 justify-between px-24 mx-auto p-6 bg-[#fff] rounded-lg">
+                <div>
+                    <h2 className="text-2xl font-semibold">Penthouse</h2>
+                    <p className="text-gray-600 mt-2">
+                    Quisque ultricies eros vel laoreet malesuada. Phasellus aliquam augue elit, <br /> nec porttitor purus fringilla ac. Suspendisse ac ex pharetra, semper orci at, <br /> porttitor purus. Duis fringilla dolor ut ante sagittis condimentum.
+                    </p>
+                    <div className="bg-blue-900 mt-12 text-white p-4 w-[550px] font-semibold text-xl rounded-lg">
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Total Area</span>
+                            <span>2400 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Bedroom</span>
+                            <span>140 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Bathroom</span>
+                            <span>40 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Balcony</span>
+                            <span>Allowed</span>
+                        </div>
+                        <div className="flex justify-between py-2">
+                            <span>Lounge</span>
+                            <span>650 Sq.ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img className="w-[35rem]" src="https://i.ibb.co.com/nM0Xn9DY/sketch-property.webp" alt="" />
+                </div>
+            </div>
+        ), },
+    { id: "top-garden", label: "Top Garden",
+        content: (
+            <div className="w-full flex gap-8 justify-between px-24 mx-auto p-6 bg-[#fff] rounded-lg">
+                <div>
+                    <h2 className="text-2xl font-semibold">Top Garden</h2>
+                    <p className="text-gray-600 mt-2">
+                    Quisque ultricies eros vel laoreet malesuada. Phasellus aliquam augue elit, <br /> nec porttitor purus fringilla ac. Suspendisse ac ex pharetra, semper orci at, <br /> porttitor purus. Duis fringilla dolor ut ante sagittis condimentum.
+                    </p>
+                    <div className="bg-blue-900 mt-12 text-white p-4 w-[550px] font-semibold text-xl rounded-lg">
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Total Area</span>
+                            <span>2400 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Bedroom</span>
+                            <span>140 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Bathroom</span>
+                            <span>40 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Balcony</span>
+                            <span>Allowed</span>
+                        </div>
+                        <div className="flex justify-between py-2">
+                            <span>Lounge</span>
+                            <span>650 Sq.ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img className="w-[35rem]" src="https://i.ibb.co.com/nM0Xn9DY/sketch-property.webp" alt="" />
+                </div>
+            </div>
+        ), },
+    { id: "double-height", label: "Double Height", 
+        content: (
+            <div className="w-full flex gap-8 justify-between px-24 mx-auto p-6 bg-[#fff] rounded-lg">
+                <div>
+                    <h2 className="text-2xl font-semibold">Double Height</h2>
+                    <p className="text-gray-600 mt-2">
+                    Quisque ultricies eros vel laoreet malesuada. Phasellus aliquam augue elit, <br /> nec porttitor purus fringilla ac. Suspendisse ac ex pharetra, semper orci at, <br /> porttitor purus. Duis fringilla dolor ut ante sagittis condimentum.
+                    </p>
+                    <div className="bg-blue-900 mt-12 text-white p-4 w-[550px] font-semibold text-xl rounded-lg">
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Total Area</span>
+                            <span>2400 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Bedroom</span>
+                            <span>140 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Bathroom</span>
+                            <span>40 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Balcony</span>
+                            <span>Allowed</span>
+                        </div>
+                        <div className="flex justify-between py-2">
+                            <span>Lounge</span>
+                            <span>650 Sq.ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img className="w-[35rem]" src="https://i.ibb.co.com/nM0Xn9DY/sketch-property.webp" alt="" />
+                </div>
+            </div>
+        ), },
+    { id: "studio", label: "The Studio", 
+        content: (
+            <div className="w-full flex gap-8 justify-between px-24 mx-auto p-6 bg-[#fff] rounded-lg">
+                <div>
+                    <h2 className="text-2xl font-semibold">The Studio</h2>
+                    <p className="text-gray-600 mt-2">
+                    Quisque ultricies eros vel laoreet malesuada. Phasellus aliquam augue elit, <br /> nec porttitor purus fringilla ac. Suspendisse ac ex pharetra, semper orci at, <br /> porttitor purus. Duis fringilla dolor ut ante sagittis condimentum.
+                    </p>
+                    <div className="bg-blue-900 mt-12 text-white p-4 w-[550px] font-semibold text-xl rounded-lg">
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Total Area</span>
+                            <span>2400 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Bedroom</span>
+                            <span>140 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Bathroom</span>
+                            <span>40 Sq.ft</span>
+                        </div>
+                        <div className="flex justify-between border-b border-white py-2">
+                            <span>Balcony</span>
+                            <span>Allowed</span>
+                        </div>
+                        <div className="flex justify-between py-2">
+                            <span>Lounge</span>
+                            <span>650 Sq.ft</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img className="w-[35rem]" src="https://i.ibb.co.com/nM0Xn9DY/sketch-property.webp" alt="" />
+                </div>
+            </div>
+        ), }
 ];
 const ApartmentMap = () => {
 
@@ -52,14 +192,14 @@ const ApartmentMap = () => {
 
     return (
         <div>
-            <div className='px-28 w-full  mt-5 py-5'>
+            <div className='px-36 w-full  mt-5 py-5'>
                 <div className='text-center mt-8'>
                     <p className='py-1 m-auto rounded-full text-center w-[160px] bg-[#ffeeeb] text-[#ff6d52] mb-3 font-medium text-base'>Apartment Sketch</p>
                     <p className='text-4xl font-bold'>See Our Living Space Of Flat</p>
                     <p className='text-center font-semibold text-xl mt-3 text-[#9e9e9e]'>Highlight the best of your properties by using the List Category shortcode.</p>
                     <hr className='mt-5 w-20 border-2 border-orange-700 m-auto' />
                 </div>
-                <div className="w-full  mx-auto mt-10">
+                <div className="w-full mx-auto mt-10">
                     {/* Tabs */}
                     <div className="flex justify-center space-x-6 mt-6  pb-2">
                         {tabs.map((tab) => (
