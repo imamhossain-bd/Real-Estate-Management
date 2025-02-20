@@ -4,10 +4,10 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/f
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-gray-900 text-white py-12">
-                <div className="max-w-6xl mx-auto px-6">
+            <footer className="bg-gray-900 text-white py-5">
+                <div className="w-full px-16 mx-auto ">
                     {/* Newsletter Section */}
-                    <div className="text-center mb-8">
+                    <div className="text-center mt-8 mb-8">
                         <h2 className="text-2xl font-bold">Newsletter</h2>
                         <p className="text-gray-400">Subscribe to our weekly Newsletter and receive updates via email.</p>
                         <div className="mt-4 flex justify-center">
@@ -90,7 +90,7 @@ const Footer = () => {
 
                     {/* Footer Bottom */}
                     <div className="text-center text-gray-400 mt-12 border-t border-gray-700 pt-4">
-                        All Rights Reserved @ RealtyClan
+                        All Rights Reserved @ Imam Hossain
                     </div>
                 </div>
             </footer>

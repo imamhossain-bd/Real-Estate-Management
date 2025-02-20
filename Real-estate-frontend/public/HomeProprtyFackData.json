@@ -82,5 +82,47 @@
     "status": "Rent",
     "sqft": 2000,
     "owner_pic": "../src/assets/avatar-03.webp"
+  },
+  {
+    "id": 7,
+    "price": "$23,000",
+    "image": "../src/assets/p-7-B5lvQNhp.jpg",
+    "name": "Penthouse Suite",
+    "rating": 4.8,
+    "address": "78 Skyline Ave, Chicago, IL",
+    "bed": 4,
+    "bathroom": 3,
+    "category": "Penthouse",
+    "status": "Rent",
+    "sqft": 4300,
+    "owner_pic": "../src/assets/avatar-03.webp"
+  },
+  {
+    "id": 8,
+    "price": "$980,000",
+    "image": "../src/assets/p-8-BYeoXDXu.jpg",
+    "name": "Elegant Victorian House",
+    "rating": 4.9,
+    "address": "789 Heritage Ave, Charleston, SC",
+    "bed": 4,
+    "bathroom": 4,
+    "category": "House",
+    "sell_or_rent": "Sell",
+    "sqft": 3500,
+    "owner_pic": "../src/assets/avatar-03.webp"
+  },
+  {
+    "id": 9,
+    "price": "$725,000",
+    "image": "../src/assets/p-9-C3rr_g2o.jpg",
+    "name": "Contemporary Townhouse",
+    "rating": 4.6,
+    "address": "333 Metro Ave, Dallas, TX",
+    "bed": 4,
+    "bathroom": 3,
+    "category": "Townhouse",
+    "sell_or_rent": "Sell",
+    "sqft": 2700,
+    "owner_pic": "../src/assets/avatar-04.jpg"
   }
 ]

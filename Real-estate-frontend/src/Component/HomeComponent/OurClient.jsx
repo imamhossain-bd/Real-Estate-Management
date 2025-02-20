@@ -48,7 +48,7 @@ const OurClient = () => {
     return (
         <div>
             <div className='px-52 w-full py-5 bg-[#f2f6f7]'>
-                <div className='mt-8'>
+                <div className='mt-8 ml-[6rem]'>
                     <p className='py-1 rounded-full text-center w-[120px] bg-[#ffeeeb] text-[#ff6d52] mb-3 font-medium text-base'>Testimonial</p>
                     <p className='text-3xl font-bold'>What Our Client Say?</p>
                     <p className='text-gray-600 mt-2'>Highlight the best of your properties by using the List Category shortcode.</p>

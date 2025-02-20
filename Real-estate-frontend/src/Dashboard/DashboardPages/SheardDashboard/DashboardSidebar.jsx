@@ -91,7 +91,7 @@ const DashboardSidebar = () => {
 </>
     return (
         <div>
-            <div id="sidebar" className={`h-[100vh] fixed bg-gray-900  text-white w-72 p-5 transition-all duration-300`}>
+            <div id="sidebar" className={`h-[100vh] fixed bg-gray-900 overflow-y-scroll  text-white w-72 p-5 transition-all duration-300`}>
               <div className="flex items-center space-x-3">
                 <div className="bg-red-500 p-2 rounded-full">
                   <FaHome size={24} />
@@ -99,7 +99,7 @@ const DashboardSidebar = () => {
                 <h1 className="text-xl font-bold">Lahomes</h1>
               </div>
               <p className="text-gray-400 mt-8 mb-5 text-base">MENU</p>
-              <ul className="text-lg overflow-y-scroll" >
+              <ul className="text-lg" >
                 {navLinks}
               </ul>
             </div>
