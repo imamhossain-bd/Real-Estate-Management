@@ -18,6 +18,22 @@ import { FaMapMarkerAlt, FaEllipsisV } from "react-icons/fa";
 
 const Home = () => {
 
+
+    const options = [
+        "Air Conditioning",
+        "Fire Place Facility",
+        "Store Room",
+        "Garage Facility",
+        "Play Ground",
+        "Hight Class Door",
+        "Swimming Pool",
+        "Furniture Include",
+        "Floor Heating System",
+        "Fire Security",
+        "Marble Floor",
+        "Garden Include",
+    ];
+
     const [advanced, setAdvanced] = useState(false);
 
     const ref = useRef(null);
@@ -76,11 +92,11 @@ const Home = () => {
                 </SwiperSlide>
             </Swiper>
             <div>
-                <div className="absolute  ml-[20rem] mt-[-10rem] z-50 ">
-                    <div className="flex items-center gap-4 py-6 px-8 bg-white shadow-md rounded-lg overflow-hidden">
+                <div className="absolute  ml-[19rem] mt-[-12rem] z-30 ">
+                    <div className="flex items-center gap-4 py-9 px-8 bg-white shadow-md rounded-lg overflow-hidden">
 
                         {/* Keyword Input */}
-                        <input type="text" placeholder="Enter Keyword..." className="px-7 py-5 w-48 outline-none border-r"/>
+                        <input type="text" placeholder="Enter Keyword..." className="px-7 py-5 w-48 outline-none border-r" />
 
                         {/* Property Types Dropdown */}
                         <select className="px-7 py-5 w-48 border-r bg-white">
@@ -88,6 +104,8 @@ const Home = () => {
                             <option>House</option>
                             <option>Apartment</option>
                             <option>Villa</option>
+                            <option>Small Family</option>
+                            <option>Single Room</option>
                         </select>
 
                         {/* Location Input with Icon */}
@@ -101,23 +119,22 @@ const Home = () => {
                         </div>
 
                         {/* Price Dropdown */}
-                        <select className="px-4 py-3 w-36 border-r bg-white  ">
+                        <select className="px-4 py-3 w-36 border-r bg-white">
                             <option>Price</option>
-                            <option>$500 - $1000</option>
+                            <option>$500 - $1000</option>jsddsvmdsdkskdsdv
                             <option>$1000 - $2000</option>
                         </select>
 
                         {/* Advanced Button */}
                         <button
                             onClick={() => setAdvanced(!advanced)}
-                            className="px-4 py-3 w-36 flex items-center justify-between border-r bg-white hover:bg-gray-100 transition"
-                        >
+                            className="px-4 py-3 w-36 flex items-center justify-between border-r bg-white hover:bg-gray-100 transition">
                             <span>Advanced</span>
                             <FaEllipsisV className="text-gray-500" />
                         </button>
 
                         {/* Search Button */}
-                        <button className="px-6 py-3 bg-transparent border-2 border-[#ff922c] text-black rounded-lg font-bold hover:bg-[#ff922c] transition">
+                        <button className="px-14 py-3 bg-transparent border-2 border-[#ff922c] text-black rounded-lg font-bold hover:bg-[#ff922c] transition">
                             Search
                         </button>
                     </div>
@@ -125,12 +142,23 @@ const Home = () => {
                     {/* Advanced Options Dropdown */}
                     {advanced && (
                         <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="mt-2 p-4 bg-white shadow-lg rounded-lg">
-                            <p className="text-sm text-gray-600">More filters coming soon...</p>
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="mt-2 p-4 bg-white shadow-lg rounded-lg">
+                            <div className="">
+                                <h3 className="text-xl font-semibold text-gray-800 mb-4">Additional Options</h3>
+
+                                <div className="grid grid-cols-4 gap-4">
+                                    {options.map((option, index) => (
+                                        <label key={index} className="flex items-center space-x-2 text-gray-600">
+                                            <input type="checkbox" className="w-5 h-5 text-blue-500 border-gray-300 rounded focus:ring focus:ring-blue-200" />
+                                            <span>{option}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                            </div>
                         </motion.div>
                     )}
                 </div>
