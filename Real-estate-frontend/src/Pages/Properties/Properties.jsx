@@ -210,6 +210,9 @@ const Properties = () => {
                                 Search
                             </button>
                         </div>
+                        <div>
+                            <h2>Hello</h2>
+                        </div>
                     </div>
                     <div>
                         <div className='grid grid-cols-3 gap-x-10'>
