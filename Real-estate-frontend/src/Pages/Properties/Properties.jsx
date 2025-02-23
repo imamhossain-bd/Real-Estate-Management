@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Range } from "react-range";
 import DetailsProperty from './DetailsProperty';
+import { Grid, List } from "lucide-react";
+
 
 
 const Properties = () => {
@@ -32,13 +34,73 @@ const Properties = () => {
 
     useEffect(() => {
         const fackData = async () => {
-            const res = await fetch('/FackData.json')
+            const res = await fetch('/AllPropertyData.json')
             const data = await res.json();
             setAllProperty(data);
             console.log(data)
         }
         fackData();
     }, [])
+
+
+    const properties = [
+        {
+            "id": 1,
+            "price": "$350,000",
+            "image": "../src/assets/p-1-BQ0X_fIz.jpg",
+            "name": "Luxury Villa",
+            "rating": 4.8,
+            "address": "123 Palm Street, Miami, FL",
+            "bed": 4,
+            "bathroom": 3,
+            "category": "House",
+            "status": "Sell",
+            "sqft": 2500,
+            "owner_pic": "../src/assets/avatar-03.webp"
+        },
+        {
+            "id": 2,
+            "price": "$2,500",
+            "image": "../src/assets/p-2-DzlMFwfd.jpg",
+            "name": "Downtown Apartment",
+            "rating": 4.5,
+            "address": "456 Main Ave, New York, NY",
+            "bed": 2,
+            "bathroom": 2,
+            "category": "Apartment",
+            "status": "Rent",
+            "sqft": 1200,
+            "owner_pic": "../src/assets/avatar-04.jpg"
+        },
+        {
+            "id": 3,
+            "price": "$540,000",
+            "image": "../src/assets/p-3-CYB7E841.jpg",
+            "name": "Modern Family Home",
+            "rating": 4.7,
+            "address": "789 Oak Drive, Los Angeles, CA",
+            "bed": 5,
+            "bathroom": 4,
+            "category": "House",
+            "status": "Sell",
+            "sqft": 3200,
+            "owner_pic": "../src/assets/avatar-05.webp"
+        },
+        {
+            "id": 4,
+            "price": "$850,000",
+            "image": "../src/assets/image (1).png",
+            "name": "Countryside Estate",
+            "rating": 4.9,
+            "address": "72 Hillside Rd, Nashville, TN",
+            "bed": 5,
+            "bathroom": 4,
+            "category": "House",
+            "status": "Sell",
+            "sqft": 4000,
+            "owner_pic": "../src/assets/avatar-06.webp"
+        }
+    ]
 
     return (
         <div>
@@ -50,11 +112,7 @@ const Properties = () => {
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">Search Property</h2>
 
                             {/* Search Input */}
-                            <input
-                                type="text"
-                                placeholder="Enter Keyword..."
-                                className="w-full border p-2 rounded-md mb-3"
-                            />
+                            <input type="text" placeholder="Enter Keyword..." className="w-full border p-2 rounded-md mb-3 outline-none" />
 
                             {/* Dropdowns */}
                             <div className="relative w-full">
@@ -210,11 +268,72 @@ const Properties = () => {
                                 Search
                             </button>
                         </div>
+                        <div className='max-w-[23rem] mx-auto mt-10 bg-white p-6 shadow-lg rounded-lg'>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <h2 className="text-xl font-semibold mb-4">Recent Property</h2>
+                                <div className="space-y-4">
+                                    {properties.map((property) => (
+                                        <motion.div
+                                            key={property.id}
+                                            className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition"
+                                            whileHover={{ scale: 1.02 }}
+                                        >
+                                            <img
+                                                src={property.image}
+                                                alt={property.name}
+                                                className="w-16 h-16 rounded-md object-cover"
+                                            />
+                                            <div>
+                                                <a href='/singleproperty' className="text-md hover:text-[#fc5a39] font-semibold">{property.name}</a>
+                                                <p className="text-yellow-600 font-bold text-lg">
+                                                    {property.price} <span className="text-gray-500 text-sm">( Monthly )</span>
+                                                </p>
+                                                <p className="text-gray-600 text-sm">📐 {property.sqft}</p>
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        </div>
                         <div>
-                            <h2>Hello</h2>
+                            <h2>hello</h2>
                         </div>
                     </div>
                     <div>
+                        <div className='mt-[4rem]'>
+                            <div className='w-full flex gap-5 px-5 justify-between items-center shadow-lg py-6 bg-[#f1f1f1] rounded-md'>
+                                <div className='flex gap-5'>
+                                    <select className='px-5 py-3 rounded-full text-lg font-semibold outline-none' name="" id="">
+                                        <option value="">For Rent</option>
+                                        <option value="">For Sell</option>
+                                    </select>
+                                    <select className='px-5 py-3 rounded-full text-lg font-semibold outline-none' name="" id="">
+                                        <option value="">Default</option>
+                                        <option value="">Most Popular</option>
+                                        <option value="">Top Rated</option>
+                                        <option value="">Newest Items</option>
+                                        <option value="">Price Low To High</option>
+                                        <option value="">Price High to Low</option>
+                                    </select>
+                                </div>
+                                <div className='flex gap-5 items-center'>
+                                    <h2 className='text-xl font-semibold'>Showing at 15 result</h2>
+                                    <div>
+                                        <button title="Grid" className="p-2 rounded-md  hover:bg-gray-300" value="grid" name="display" type="submit">
+                                            <Grid className="w-7 h-7 text-gray-600" />
+                                        </button>
+                                        <button title="List" className="p-2 rounded-md  hover:bg-gray-300"
+                                            value="list" name="display" type="submit">
+                                            <List className="w-7 h-7 text-gray-600" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className='grid grid-cols-3 gap-x-10'>
                             {
                                 allProperty.map((allPro) => <DetailsProperty key={allPro.id} pasAllProperty={allPro} ></DetailsProperty>)

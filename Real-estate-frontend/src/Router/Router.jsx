@@ -16,6 +16,7 @@ import DashboardProperty from '@/Dashboard/DashboardPages/DashboardProperty/Dash
 import DashAddPropert from '@/Dashboard/DashboardPages/DashAddProperty/DashAddPropert';
 import DashAgents from '@/Dashboard/DashboardPages/DashAgents/DashAgents';
 import DashCustomar from '@/Dashboard/DashboardPages/DashCustomar/DashCustomar';
+import SinglePropertyDetails from '@/Component/PropertyComponent/SinglePropertyDetails';
 
 const Router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ const Router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact></Contact>
+            },
+            {
+                path: '/singleproperty',
+                element: <SinglePropertyDetails></SinglePropertyDetails>
             },
             {
                 path: '/authcomponent',
