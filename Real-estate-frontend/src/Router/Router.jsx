@@ -56,7 +56,7 @@ const Router = createBrowserRouter([
                 element: <Contact></Contact>
             },
             {
-                path: '/singleproperty',
+                path: '/singleproperty/:id',
                 element: <SinglePropertyDetails></SinglePropertyDetails>
             },
             {

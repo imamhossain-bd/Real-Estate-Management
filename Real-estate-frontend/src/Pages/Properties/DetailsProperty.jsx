@@ -13,7 +13,7 @@ const DetailsProperty = ({ pasAllProperty }) => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}>
                     <div className="w-[24rem] mt-10 rounded-2xl overflow-hidden shadow-lg bg-white">
-                        <a href="/singleproperty">
+                        <a href={`/singleproperty/${id}`}>
                             <div className="relative">
                                 <img className="w-full h-60 object-cover transition-transform duration-500 transform hover:scale-110" src={image} alt="Summer House" />
                                 <span className="absolute top-3 font-semibold left-3 bg-purple-600 text-white text-base px-3 py-1 rounded-lg">

@@ -5,6 +5,7 @@ import { faAngleDown, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { Range } from "react-range";
 import DetailsProperty from './DetailsProperty';
 import { Grid, List } from "lucide-react";
+import UseHookData from '@/Hooks/UseHookData';
 
 
 
@@ -30,17 +31,20 @@ const Properties = () => {
     const min = 0;
     const max = 1000000;
 
-    const [allProperty, setAllProperty] = useState([]);
+    const { data } = UseHookData();
 
-    useEffect(() => {
-        const fackData = async () => {
-            const res = await fetch('/AllPropertyData.json')
-            const data = await res.json();
-            setAllProperty(data);
-            console.log(data)
-        }
-        fackData();
-    }, [])
+    // const [allProperty, setAllProperty] = useState([]);
+
+    // useEffect(() => {
+    //     const fackData = async () => {
+    //         const res = await fetch('/AllPropertyData.json')
+    //         const data = await res.json();
+    //         setAllProperty(data);
+    //         console.log(data)
+    //     }
+    //     fackData();
+    // }, [])
+
 
 
     const properties = [
@@ -104,9 +108,9 @@ const Properties = () => {
 
     return (
         <div>
-            <div className='px-20 py-10'>
+            <div className='px-[4rem] py-10'>
                 <h2 className='text-3xl font-bold'>Property Listing</h2>
-                <div className='flex gap-6 justify-center'>
+                <div className='flex gap-8 justify-center'>
                     <div>
                         <div className="max-w-[23rem] mx-auto mt-14 bg-white p-6 shadow-lg rounded-lg">
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">Search Property</h2>
@@ -288,7 +292,7 @@ const Properties = () => {
                                                 className="w-16 h-16 rounded-md object-cover"
                                             />
                                             <div>
-                                                <a href='/singleproperty' className="text-md hover:text-[#fc5a39] font-semibold">{property.name}</a>
+                                                <a href='' className="text-md hover:text-[#fc5a39] font-semibold">{property.name}</a>
                                                 <p className="text-yellow-600 font-bold text-lg">
                                                     {property.price} <span className="text-gray-500 text-sm">( Monthly )</span>
                                                 </p>
@@ -321,7 +325,7 @@ const Properties = () => {
                                     </select>
                                 </div>
                                 <div className='flex gap-5 items-center'>
-                                    <h2 className='text-xl font-semibold'>Showing at 15 result</h2>
+                                    <h2 className='text-xl font-semibold'>Showing at 20 result</h2>
                                     <div>
                                         <button title="Grid" className="p-2 rounded-md  hover:bg-gray-300" value="grid" name="display" type="submit">
                                             <Grid className="w-7 h-7 text-gray-600" />
@@ -336,7 +340,7 @@ const Properties = () => {
                         </div>
                         <div className='grid grid-cols-3 gap-x-10'>
                             {
-                                allProperty.map((allPro) => <DetailsProperty key={allPro.id} pasAllProperty={allPro} ></DetailsProperty>)
+                                data.map((allPro) => <DetailsProperty key={allPro.id} pasAllProperty={allPro} ></DetailsProperty>)
                             }
                         </div>
                     </div>

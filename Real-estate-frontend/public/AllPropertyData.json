@@ -11,7 +11,10 @@
         "category": "House",
         "status": "Sell",
         "sqft": 2500,
-        "owner_pic": "../src/assets/avatar-03.webp"
+        "owner_pic": "../src/assets/avatar-03.webp",
+        "room": 4,
+        "garage": 2,
+        "swimming": "2 Small"
     },
     {
         "id": 2,
@@ -25,7 +28,10 @@
         "category": "Apartment",
         "status": "Rent",
         "sqft": 1200,
-        "owner_pic": "../src/assets/avatar-04.jpg"
+        "owner_pic": "../src/assets/avatar-04.jpg",
+        "room": 4,
+        "garage": 1,
+        "swimming": "1 Larges"
     },
     {
         "id": 3,
@@ -39,7 +45,10 @@
         "category": "House",
         "status": "Sell",
         "sqft": 3200,
-        "owner_pic": "../src/assets/avatar-05 (1).webp"
+        "owner_pic": "../src/assets/avatar-05 (1).webp",
+        "room": 4,
+        "garage": 2,
+        "swimming": "2 Small"
     },
     {
         "id": 4,
@@ -53,7 +62,10 @@
         "category": "Studio",
         "status": "Rent",
         "sqft": 600,
-        "owner_pic": "../src/assets/avatar-05.webp"
+        "owner_pic": "../src/assets/avatar-05.webp",
+        "room": 4,
+        "garage": 0,
+        "swimming": "1 Larges"
     },
     {
         "id": 5,
@@ -67,7 +79,10 @@
         "category": "House",
         "status": "Sell",
         "sqft": 2800,
-        "owner_pic": "../src/assets/avatar-06.webp"
+        "owner_pic": "../src/assets/avatar-06.webp",
+        "room": 4,
+        "garage": 2,
+        "swimming": "2 Small"
     },
     {
         "id": 6,
@@ -81,7 +96,10 @@
         "category": "Penthouse",
         "status": "Rent",
         "sqft": 2000,
-        "owner_pic": "../src/assets/avatar-07.webp"
+        "owner_pic": "../src/assets/avatar-07.webp",
+        "room": 4,
+        "garage": 1,
+        "swimming": "2 Small"
     },
     {
         "id": 7,
@@ -95,7 +113,10 @@
         "category": "House",
         "status": "Sell",
         "sqft": 2600,
-        "owner_pic": "../src/assets/avatar-03.webp"
+        "owner_pic": "../src/assets/avatar-03.webp",
+        "room": 4,
+        "garage": 2,
+        "swimming": "1 Larges"
     },
     {
         "id": 8,
@@ -109,7 +130,10 @@
         "category": "Loft",
         "status": "Rent",
         "sqft": 1500,
-        "owner_pic": "../src/assets/avatar-04.jpg"
+        "owner_pic": "../src/assets/avatar-04.jpg",
+        "room": 4,
+        "garage": 1,
+        "swimming": "1 Larges"
     },
     {
         "id": 9,
@@ -123,7 +147,10 @@
         "category": "House",
         "status": "Sell",
         "sqft": 2900,
-        "owner_pic": "../src/assets/avatar-05 (1).webp"
+        "owner_pic": "../src/assets/avatar-05 (1).webp",
+        "room": 4,
+        "garage": 2,
+        "swimming": "2 Small"
     },
     {
         "id": 10,
@@ -137,7 +164,10 @@
         "category": "House",
         "status": "Rent",
         "sqft": 900,
-        "owner_pic": "../src/assets/avatar-05.webp"
+        "owner_pic": "../src/assets/avatar-05.webp",
+        "room": 4,
+        "garage": 1,
+        "swimming": "1 Larges"
     },
     {
         "id": 11,
@@ -151,7 +181,10 @@
         "category": "House",
         "status": "Sell",
         "sqft": 4000,
-        "owner_pic": "../src/assets/avatar-06.webp"
+        "owner_pic": "../src/assets/avatar-06.webp",
+        "room": 4,
+        "garage": 2,
+        "swimming": "2 Small"
     },
     {
         "id": 12,
@@ -165,7 +198,10 @@
         "category": "Condo",
         "status": "Rent",
         "sqft": 1300,
-        "owner_pic": "../src/assets/avatar-07.webp"
+        "owner_pic": "../src/assets/avatar-07.webp",
+        "room": 4,
+        "garage": 1,
+        "swimming": "1 Larges"
     },
     {
         "id": 13,
@@ -179,7 +215,10 @@
         "category": "Mansion",
         "status": "Sell",
         "sqft": 7000,
-        "owner_pic": "../src/assets/avatar-03.webp"
+        "owner_pic": "../src/assets/avatar-03.webp",
+        "room": 4,
+        "garage": 3,
+        "swimming": "2 Small"
     },
     {
         "id": 14,
@@ -193,7 +232,10 @@
         "category": "Apartment",
         "status": "Rent",
         "sqft": 1100,
-        "owner_pic": "../src/assets/avatar-04.jpg"
+        "owner_pic": "../src/assets/avatar-04.jpg",
+        "room": 4,
+        "garage": 1,
+        "swimming": "1 Larges"
     },
     {
         "id": 15,
@@ -207,7 +249,10 @@
         "category": "Villa",
         "status": "Sell",
         "sqft": 3200,
-        "owner_pic": "../src/assets/avatar-05 (1).webp"
+        "owner_pic": "../src/assets/avatar-05 (1).webp",
+        "room": 4,
+        "garage": 2,
+        "swimming": "2 Small"
     },
     {
         "id": 16,
@@ -221,7 +266,10 @@
         "category": "Lodge",
         "status": "Sell",
         "sqft": 5500,
-        "owner_pic": "../src/assets/avatar-05.webp"
+        "owner_pic": "../src/assets/avatar-05.webp",
+        "room": 4,
+        "garage": 3,
+        "swimming": "2 Small"
     },
     {
         "id": 17,
@@ -235,7 +283,10 @@
         "category": "Studio",
         "status": "Rent",
         "sqft": 650,
-        "owner_pic": "../src/assets/avatar-06.webp"
+        "owner_pic": "../src/assets/avatar-06.webp",
+        "room": 4,
+        "garage": 0,
+        "swimming": "1 Larges"
     },
     {
         "id": 18,
@@ -249,7 +300,10 @@
         "category": "Cottage",
         "status": "Sell",
         "sqft": 2000,
-        "owner_pic": "../src/assets/avatar-07.webp"
+        "owner_pic": "../src/assets/avatar-07.webp",
+        "room": 4,
+        "garage": 1,
+        "swimming": "1 Larges"
     },
     {
         "id": 19,
@@ -263,7 +317,10 @@
         "category": "Penthouse",
         "status": "Rent",
         "sqft": 2500,
-        "owner_pic": "../src/assets/avatar-03.webp"
+        "owner_pic": "../src/assets/avatar-03.webp",
+        "room": 4,
+        "garage": 2,
+        "swimming": "2 Small"
     },
     {
         "id": 20,
@@ -277,7 +334,10 @@
         "category": "Townhouse",
         "status": "Sell",
         "sqft": 2700,
-        "owner_pic": "../src/assets/avatar-04.jpg"
+        "owner_pic": "../src/assets/avatar-04.jpg",
+        "room": 4,
+        "garage": 2,
+        "swimming": "1 Larges"
     },
     {
         "id": 21,
@@ -291,7 +351,10 @@
         "category": "House",
         "status": "Sell",
         "sqft": 2500,
+        "room": 4,
         "owner_pic": "../src/assets/avatar-05 (1).webp",
+        "garage": 1,
+        "swimming": "2 Small",
         "reviews": [
             {
                 "user": "John Doe",
@@ -317,7 +380,10 @@
         "category": "Apartment",
         "status": "Rent",
         "sqft": 1200,
+        "room": 4,
         "owner_pic": "../src/assets/avatar-05.webp",
+        "garage": 2,
+        "swimming": "1 Larges",
         "reviews": [
             {
                 "user": "Mike Johnson",
@@ -343,7 +409,10 @@
         "category": "House",
         "status": "Sell",
         "sqft": 3200,
+        "room": 4,
         "owner_pic": "../src/assets/avatar-06.webp",
+        "garage": 1,
+        "swimming": "2 Small",
         "reviews": [
             {
                 "user": "David Brown",
@@ -369,7 +438,10 @@
         "category": "Studio",
         "status": "Rent",
         "sqft": 600,
+        "room": 4,
         "owner_pic": "../src/assets/avatar-07.webp",
+        "garage": 1,
+        "swimming": "1 Larges",
         "reviews": [
             {
                 "user": "Chris Wilson",

@@ -31,6 +31,9 @@ const AllProperty = () => {
                         homeProperty.map((hpro) => <AllPropertyDetails key={hpro.id} pasProperty = {hpro} ></AllPropertyDetails> )
                     }
                 </div>
+                <div className='mt-10 hover:bg-[#ff4410] bg-transparent border border-[#ff4410] w-40 text-xl font-bold text-[#ff4410] hover:text-[#fff] rounded-lg py-4 text-center transition-colors duration-300 m-auto'>
+                    <button><a href="/properties">Veiw All</a></button>
+                </div>
             </div>
         </div>
     );
