@@ -21,7 +21,7 @@ const SinglePropertyDetails = ({ }) => {
 
     console.log(singleData);
 
-    const { image, address, bathroom, category, name, room, garage, swimming, owner_pic, price, rating, sqft, status, bed } = singleData || {};
+    const { image, property_id, address, bathroom, age, insurance, garden_field, elevator, fireplace, type, third_party, total_floor, dining_capacity, heating_system, installment_facility, swimming_pool, security, exit, category, name, room, garage, swimming, owner_pic, price, rating, sqft, status, bed } = singleData || {};
 
     return (
         <div>
@@ -121,16 +121,65 @@ const SinglePropertyDetails = ({ }) => {
                                     <span className='me-4 text-xl font-semibold'>Highlights:</span>
                                     <div>
                                         <ul>
-                                            <li className='flex gap-5 items-center text-lg'><FontAwesomeIcon icon={faCheck} className='px-2 py-1 bg-[#f0c399] rounded' /> Regular Fit.</li>
-                                            <li className='flex gap-5 items-center text-lg'><FontAwesomeIcon icon={faCheck} className='px-2 py-1 bg-[#f0c399] rounded' /> Full sleeves.</li>
-                                            <li className='flex gap-5 items-center text-lg'><FontAwesomeIcon icon={faCheck} className='px-2 py-1 bg-[#f0c399] rounded' /> Machine wash, tumble dry.</li>
+                                            <li className='flex gap-5 mb-3 items-center text-lg'><FontAwesomeIcon icon={faCheck} className='px-2 py-2 bg-[#f0c399] rounded-full' /> Regular Fit.</li>
+                                            <li className='flex gap-5 mb-3 items-center text-lg'><FontAwesomeIcon icon={faCheck} className='px-2 py-2 bg-[#f0c399] rounded-full' /> Full sleeves.</li>
+                                            <li className='flex gap-5 mb-3 items-center text-lg'><FontAwesomeIcon icon={faCheck} className='px-2 py-2 bg-[#f0c399] rounded-full' /> Machine wash, tumble dry.</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <h2>Hello</h2>
+                            <div className='bg-[#f4f4f4] px-7 shadow-xl mt-10 py-4 rounded-md w-full'>
+                                <h2 className='text-3xl font-bold mt-5'>More Information</h2>
+                                <div>
+                                    <ul className='grid grid-cols-3 mb-5 mt-5 gap-y-5 text-lg font-semibold'>
+                                        <li>Age : {age}</li>
+                                        <li>Insurance : {insurance}</li>
+                                        <li>Garden & Field : {garden_field}</li>
+                                        <li>Alivator : {elevator}</li>
+                                        <li>Fire Place : {fireplace}</li>
+                                        <li>Type : {type}</li>
+                                        <li>3rd Party : {third_party}</li>
+                                        <li>Total Floor : {total_floor}</li>
+                                        <li>Dining Capacity : {dining_capacity}</li>
+                                        <li>Heating System : {heating_system}</li>
+                                        <li>Installment Facility : {installment_facility}</li>
+                                        <li>Swiming Pool : {swimming}</li>
+                                        <li>Security : {security}</li>
+                                        <li>Exit : {exit}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className='bg-[#f4f4f4] px-7 shadow-xl mt-10 py-4 rounded-md w-full'>
+                                <h2 className='text-3xl font-bold mt-5'>Property Summary</h2>
+                                <div>
+                                    <ul className='grid grid-cols-2 gap-10 mb-5 mt-5 gap-y-5 text-lg font-semibold'>
+                                        <li className='border-b-2'>Property Id : <span className='ml-36'>{property_id}</span></li>
+                                        <li className='border-b-2'>Listing Type : <span className='ml-36'>{status}</span></li>
+                                        <li className='border-b-2'>Property Type: <span className='ml-[8rem]'>{category}</span></li>
+                                        <li className='border-b-2'>Current Owner : <span className='ml-36'></span></li>
+                                        <li className='border-b-2'>Insurance : <span className='ml-40'>{insurance}</span></li>
+                                        <li className='border-b-2'>Architecture : <span className='ml-36'></span></li>
+                                        <li className='border-b-2'>Total Floor : <span className='ml-[9.5rem]'>{total_floor}</span></li>
+                                        <li className='border-b-2'>Year of Built : <span className='ml-36'>{age}</span></li>
+                                        <li className='border-b-2'>Furniture Type : <span className='ml-36'></span></li>
+                                        <li className='border-b-2'>Payment Way : <span className='ml-32'>Instalment / Cash</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className='bg-[#f4f4f4] px-7 shadow-xl mt-10 py-4 rounded-md w-full'>
+                                <h2 className='text-3xl font-bold mt-5'>Property Summary</h2>
+                                <div>
+                                    <ul>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='w-[40rem] bg-slate-400 h-[200px] rounded-md px-4 py-4'>
