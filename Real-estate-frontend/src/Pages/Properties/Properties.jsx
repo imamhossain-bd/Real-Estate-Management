@@ -303,7 +303,7 @@ const Properties = () => {
                                 </div>
                             </motion.div>
                         </div>
-                        <div>
+                        <div className='max-w-[23rem] mx-auto mt-10 bg-white p-6 shadow-lg rounded-lg'>
                             <h2>hello</h2>
                         </div>
                     </div>

@@ -718,7 +718,8 @@
             {
                 "user": "Mike Johnson",
                 "rating": 4.2,
-                "comment": "Great location but a bit noisy at night."
+                "comment": "Great location but a bit noisy at night.",
+                "img": "../src/assets/avatar-06.webp"
             },
             {
                 "user": "Emily Smith",
@@ -762,7 +763,8 @@
             {
                 "user": "David Brown",
                 "rating": 5,
-                "comment": "Spacious and modern, perfect for a family."
+                "comment": "Spacious and modern, perfect for a family.",
+                "img": "../src/assets/avatar-03.webp"
             },
             {
                 "user": "Lisa Green",
@@ -806,7 +808,8 @@
             {
                 "user": "Chris Wilson",
                 "rating": 4.0,
-                "comment": "Small but cozy, good for one person."
+                "comment": "Small but cozy, good for one person.",
+                "img": "../src/assets/avatar-05 (1).webp"
             },
             {
                 "user": "Anna Roberts",
