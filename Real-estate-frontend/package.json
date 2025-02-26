@@ -21,9 +21,11 @@
     "@mui/material": "^6.4.3",
     "antd": "^5.23.3",
     "apexcharts": "^4.4.0",
+    "axios": "^1.8.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "flowbite-react": "^0.10.2",
+    "formik": "^2.4.6",
     "framer-motion": "^12.4.0",
     "lucide-react": "^0.474.0",
     "radix-ui": "^1.1.2",
@@ -34,11 +36,13 @@
     "react-router-dom": "^7.1.5",
     "react-slick": "^0.30.3",
     "react-slider": "^2.0.6",
+    "react-toastify": "^11.0.5",
     "real-estate-frontend": "file:",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.2",
     "tailwind-merge": "^3.0.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
