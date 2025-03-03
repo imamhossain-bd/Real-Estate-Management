@@ -17,6 +17,9 @@ import DashAddPropert from '@/Dashboard/DashboardPages/DashAddProperty/DashAddPr
 import DashAgents from '@/Dashboard/DashboardPages/DashAgents/DashAgents';
 import DashCustomar from '@/Dashboard/DashboardPages/DashCustomar/DashCustomar';
 import SinglePropertyDetails from '@/Component/PropertyComponent/SinglePropertyDetails';
+import DashboardWrapper from '@/Dashboard/DashboardLayout/DashboardWrapper';
+
+
 
 const Router = createBrowserRouter([
     {
@@ -67,7 +70,7 @@ const Router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <Layoutdashboard></Layoutdashboard>,
+        element: <Layoutdashboard/>,
         children: [
             {
                 path: 'dashboardhome',

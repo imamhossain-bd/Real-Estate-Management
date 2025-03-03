@@ -55,15 +55,10 @@ const DashAddPropert = () => {
                                 {selectedFile ? selectedFile.name : "Drop your images here, or click to browse"}
                             </p>
                             <p className="text-gray-400 text-xs mt-1">
-                                (1900 x 1200 (4:3) recommended. PNG, JPG, and GIF files are allowed)
+                                (1900 x 1200 (4:3) recommended. PNG, JPG, JPEG, and GIF files are allowed)
                             </p>
                         </label>
-                        <input
-                            id="fileUpload"
-                            type="file"
-                            className="hidden"
-                            onChange={handleFileChange}
-                        />
+                        <input id="fileUpload" type="file" className="hidden" onChange={handleFileChange}/>
                     </div>
                     {/* New Property Add */}
                     <div className="bg-white shadow-lg mb-5 mt-3 rounded-lg p-6 w-full max-w-4xl mx-auto">
@@ -147,11 +142,12 @@ const DashAddPropert = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className='flex justify-end mb-5 items-center gap-5 mt-14'>
+                            <button className="text-purple-900 hover:text-[#fff] hover:bg-[#6058e8] border-2 font-semibold py-2 px-3 rounded-md">Create Property</button>
+                            <button className="text-[#fff] bg-[#e96767] font-semibold py-2 px-8 rounded-md">Cancel</button>
+                        </div>
                     </div>
-                    <div className='flex justify-end mb-10 items-center gap-5 mt-3'>
-                        <button className="text-purple-900 hover:text-[#fff] hover:bg-[#6058e8] border-2 font-semibold py-2 px-3 rounded-md">Create Property</button>
-                        <button className="text-[#fff] bg-[#e96767] font-semibold py-2 px-8 rounded-md">Cancel</button>
-                    </div>
+
                 </div>
             </div>
         </div>
