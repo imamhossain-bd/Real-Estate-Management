@@ -63,7 +63,7 @@ const RegisterForm = () => {
                     <ErrorMessage component={'p'} name="email" className="text-[#fe1d1d]" />
                     <Field type="password" placeholder="Password" name="password" className="w-[160%]  outline-none p-2 my-2 bg-gray-200 rounded" />
                     <ErrorMessage component={'p'} name="password" className="text-[#fe1d1d]" />
-                    <button disabled={loading} type="submit" id="LoginBtn" className="bg-red-500 text-white px-6 py-2 rounded mt-4"><a href="/dashboards">Sign Up</a></button>
+                    <button disabled={loading} type="submit" id="LoginBtn" className="bg-red-500 text-white px-6 py-2 rounded mt-4"><a href="">Sign Up</a></button>
                 </Form>
             </Formik>
         </div>

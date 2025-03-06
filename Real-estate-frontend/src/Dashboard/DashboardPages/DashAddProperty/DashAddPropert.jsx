@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FaBed, FaBath } from "react-icons/fa";
 import { BiRuler } from "react-icons/bi";
 import { MdLayers } from "react-icons/md";
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const DashAddPropert = () => {
 
@@ -11,6 +13,54 @@ const DashAddPropert = () => {
         const file = event.target.files[0];
         setSelectedFile(file);
     };
+
+
+    const [formData, setFormData] = useState({
+        property_name: "",
+        status: "",
+        price: "",
+        property_category: "",
+        bedrooms: "",
+        bathrooms: "",
+        square_foot: "",
+        floor: "",
+        zip_code: "",
+        city: "",
+        country: "",
+        property_address: "",
+        image: null,
+        owner_id: "", 
+    });
+
+    const handelChange = (e) => {
+        // if(e.target.name === image){
+        //     setFormData({...formData, image: e.target.files[0] });
+        // }else{
+        //     setFormData({...formData, [e.target.name]: e.target.value })
+        // }
+
+        setFormData({...formData, [e.target.name]: e.target.value })
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const data = new FormData();
+    
+        for (let key in formData) {
+            data.append(key, formData[key]);
+        }
+    
+        try {
+            const response = await axios.post("http://127.0.0.1:8000/api/properties", data, {
+                headers: { "Content-Type": "multipart/form-data" },
+            });
+            toast.success(response.data.message || "Property added successfully!");
+        } catch (error) {
+            toast.error(error.response?.data?.message || "Failed to add property.");
+            console.log(error)
+        }
+    };
+    
 
     return (
         <div className='pt-32 px-8'>
@@ -43,7 +93,7 @@ const DashAddPropert = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <form onSubmit={handleSubmit} encType="multipart/form-data">
                     {/* Image Div */}
                     <div className="border-2-2 border-2-dashed border-2-gray-300 rounded-lg p-6 w-[110vh] h-[50vh] text-center bg-white shadow-lg">
                         <h2 className="text-gray-700 font-medium mb-2">Add Property Photo</h2>
@@ -68,11 +118,11 @@ const DashAddPropert = () => {
                             {/* Property Name & Categories */}
                             <div>
                                 <label className="block text-gray-900 text-sm mb-1">Property Name</label>
-                                <input type="text" placeholder="Name" className="w-full border-2 rounded px-3 py-2 outline-none" />
+                                <input type="text" placeholder="Name" onChange={handelChange} className="w-full border-2 rounded px-3 py-2 outline-none" />
                             </div>
                             <div>
                                 <label className="block text-gray-900 text-sm mb-1">Property Categories</label>
-                                <input type="text" placeholder="Villas" className="w-full border-2 rounded px-3 py-2 outline-none" />
+                                <input type="text" placeholder="Villas" onChange={handelChange} className="w-full border-2 rounded px-3 py-2 outline-none" />
                             </div>
 
                             {/* Price & Property For */}
@@ -80,12 +130,12 @@ const DashAddPropert = () => {
                                 <label className="block text-gray-900 text-sm mb-1">Price</label>
                                 <div className="flex items-center border-2 rounded px-3 py-2">
                                     <span className="text-gray-500">$</span>
-                                    <input type="text" placeholder="000" className="w-full outline-none ml-2" />
+                                    <input type="text" placeholder="000" onChange={handelChange} className="w-full outline-none ml-2" />
                                 </div>
                             </div>
                             <div>
                                 <label className="block text-gray-900 text-sm mb-1">Property For</label>
-                                <input type="text" placeholder="Sale" className="w-full border-2 rounded px-3 py-2 outline-none" />
+                                <input type="text" placeholder="Sale" onChange={handelChange} className="w-full border-2 rounded px-3 py-2 outline-none" />
                             </div>
 
                             {/* Bedroom & Bathroom */}
@@ -93,14 +143,14 @@ const DashAddPropert = () => {
                                 <label className="block text-gray-900 text-sm mb-1">Bedroom</label>
                                 <div className="flex items-center border-2 rounded px-3 py-2">
                                     <span className="text-gray-500">🛏️</span>
-                                    <input type="number" className="w-full outline-none ml-2" />
+                                    <input type="number" onChange={handelChange} className="w-full outline-none ml-2" />
                                 </div>
                             </div>
                             <div className="relative">
                                 <label className="block text-gray-900 text-sm mb-1">Bathroom</label>
                                 <div className="flex items-center border-2 rounded px-3 py-2">
                                     <span className="text-gray-500">🛁</span>
-                                    <input type="number" className="w-full outline-none ml-2" />
+                                    <input type="number" onChange={handelChange} className="w-full outline-none ml-2" />
                                 </div>
                             </div>
 
@@ -109,36 +159,36 @@ const DashAddPropert = () => {
                                 <label className="block text-gray-900 text-sm mb-1">Square Foot</label>
                                 <div className="flex items-center border-2 rounded px-3 py-2">
                                     <span className="text-gray-500">📏</span>
-                                    <input type="number" className="w-full outline-none ml-2" />
+                                    <input type="number" onChange={handelChange} className="w-full outline-none ml-2" />
                                 </div>
                             </div>
                             <div className="relative">
                                 <label className="block text-gray-900 text-sm mb-1">Floor</label>
                                 <div className="flex items-center border-2 rounded px-3 py-2">
                                     <span className="text-gray-500">🏢</span>
-                                    <input type="number" className="w-full outline-none ml-2" />
+                                    <input type="number" onChange={handelChange} className="w-full outline-none ml-2" />
                                 </div>
                             </div>
 
                             {/* Property Address */}
                             <div className="col-span-2">
                                 <label className="block text-gray-900 text-sm mb-1">Property Address</label>
-                                <textarea placeholder="Enter address" className="w-full border-2 rounded px-3 py-2 outline-none"></textarea>
+                                <textarea placeholder="Enter address" onChange={handelChange} className="w-full border-2 rounded px-3 py-2 outline-none"></textarea>
                             </div>
 
                             {/* Zip-Code, City & Country */}
                             <div className='flex items-center gap-5 w-[110vh]'>
                                 <div>
                                     <label className="block text-gray-800 text-sm mb-1">Zip-Code</label>
-                                    <input type="text" placeholder="Zip-Code" className="w-full border-2 rounded px-3 py-2 outline-none" />
+                                    <input type="text" placeholder="Zip-Code" onChange={handelChange} className="w-full border-2 rounded px-3 py-2 outline-none" />
                                 </div>
                                 <div>
                                     <label className="block text-gray-900 text-sm mb-1">City</label>
-                                    <input type="text" placeholder="City" className="w-full border-2 rounded px-3 py-2 outline-none" />
+                                    <input type="text" placeholder="City" onChange={handelChange} className="w-full border-2 rounded px-3 py-2 outline-none" />
                                 </div>
                                 <div>
                                     <label className="block text-gray-900 text-sm mb-1">Country</label>
-                                    <input type="text" placeholder="Country" className="w-full border-2 rounded px-3 py-2 outline-none" />
+                                    <input type="text" placeholder="Country" onChange={handelChange} className="w-full border-2 rounded px-3 py-2 outline-none" />
                                 </div>
                             </div>
                         </div>
@@ -148,7 +198,7 @@ const DashAddPropert = () => {
                         </div>
                     </div>
 
-                </div>
+                </form>
             </div>
         </div>
     );

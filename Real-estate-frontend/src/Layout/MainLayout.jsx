@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
     useEffect(() => {
         if (!user?.email) {
             setLoading(false);
-            navigate("/");
+            navigate("/dashboard");
         } else {
             setLoading(false); // Prevent infinite loading
         }

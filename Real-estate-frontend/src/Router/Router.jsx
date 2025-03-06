@@ -18,6 +18,8 @@ import DashAgents from '@/Dashboard/DashboardPages/DashAgents/DashAgents';
 import DashCustomar from '@/Dashboard/DashboardPages/DashCustomar/DashCustomar';
 import SinglePropertyDetails from '@/Component/PropertyComponent/SinglePropertyDetails';
 import DashboardWrapper from '@/Dashboard/DashboardLayout/DashboardWrapper';
+import LoginForm from '@/Pages/Auth/LoginPages';
+import RegisterForm from '@/Pages/Auth/RegistrationPages';
 
 
 
@@ -61,6 +63,14 @@ const Router = createBrowserRouter([
             {
                 path: '/singleproperty/:id',
                 element: <SinglePropertyDetails></SinglePropertyDetails>
+            },
+            {
+                path: '/login',
+                element: <LoginForm/>
+            },
+            {
+                path: '/registration',
+                element: <RegisterForm></RegisterForm>
             },
             {
                 path: '/authcomponent',
