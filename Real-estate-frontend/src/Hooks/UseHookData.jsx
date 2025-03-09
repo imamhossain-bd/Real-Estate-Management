@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 const UseHookData = () => {
 
     const [data, setData] = useState([]);
+    
     const [loading, setLoading] = useState([true]);
 
     useEffect(() => {

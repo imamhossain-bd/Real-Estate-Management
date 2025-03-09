@@ -37,11 +37,11 @@ const OurClient = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 700,
+        speed: 900,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3500,
+        autoplaySpeed: 3000,
         arrows: true,
     };
 

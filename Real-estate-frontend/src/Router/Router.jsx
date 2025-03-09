@@ -20,6 +20,7 @@ import SinglePropertyDetails from '@/Component/PropertyComponent/SinglePropertyD
 import DashboardWrapper from '@/Dashboard/DashboardLayout/DashboardWrapper';
 import LoginForm from '@/Pages/Auth/LoginPages';
 import RegisterForm from '@/Pages/Auth/RegistrationPages';
+import SingleAgent from '@/Component/AgentComponent/SingleAgent';
 
 
 
@@ -63,6 +64,10 @@ const Router = createBrowserRouter([
             {
                 path: '/singleproperty/:id',
                 element: <SinglePropertyDetails></SinglePropertyDetails>
+            },
+            {
+                path: '/singleagent/:id',
+                element: <SingleAgent></SingleAgent>
             },
             {
                 path: '/login',
