@@ -9,7 +9,7 @@
       "email": "john.doe@example.com",
       "address": "123 Main St, New York, NY",
       "practice_area": "Luxury Homes, Commercial Properties",
-      "description": "John is a top-performing agent specializing in luxury homes and commercial real estate.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "https://i.ibb.co.com/dwJxvkp6/agent-01.webp"
     },
     {
@@ -22,7 +22,7 @@
       "email": "sarah.smith@example.com",
       "address": "456 Elm St, Los Angeles, CA",
       "practice_area": "Residential Homes, Rentals",
-      "description": "Sarah has a strong track record in residential sales and high-end rentals.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "https://i.ibb.co.com/20zSFdMB/agent-02.webp"
     },
     {
@@ -35,7 +35,7 @@
       "email": "michael.johnson@example.com",
       "address": "789 Oak St, Chicago, IL",
       "practice_area": "Commercial Leasing, Investment Properties",
-      "description": "Michael is known for his expertise in commercial leasing and property investments.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "https://i.ibb.co.com/Ps0TJNxy/agent-03.webp"
     },
     {
@@ -48,7 +48,7 @@
       "email": "emily.davis@example.com",
       "address": "567 Pine St, Houston, TX",
       "practice_area": "Luxury Homes, Residential Sales",
-      "description": "Emily helps homeowners sell their properties for top dollar with strategic marketing.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "https://i.ibb.co.com/VcsjdZKM/agent-04.webp"
     },
     {
@@ -61,7 +61,7 @@
       "email": "david.martinez@example.com",
       "address": "910 Maple St, Miami, FL",
       "practice_area": "Investment Properties, Real Estate Development",
-      "description": "David has extensive experience in real estate development and property investments.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "https://i.ibb.co.com/0ydQZBPv/agent-05.webp"
     },
     {
@@ -74,7 +74,7 @@
       "email": "jessica.lee@example.com",
       "address": "222 Birch St, Seattle, WA",
       "practice_area": "First-Time Buyers, Townhouses",
-      "description": "Jessica specializes in helping first-time buyers find their dream homes.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "https://i.ibb.co.com/Wvz4zvt7/agent-06.webp"
     },
     {
@@ -87,7 +87,7 @@
       "email": "robert.brown@example.com",
       "address": "333 Cedar St, San Francisco, CA",
       "practice_area": "Luxury Condos, High-Rise Apartments",
-      "description": "Robert specializes in high-rise apartments and luxury condos in downtown areas.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "../src/assets/agent-01.webp"
     },
     {
@@ -100,7 +100,7 @@
       "email": "olivia.wilson@example.com",
       "address": "444 Palm St, San Diego, CA",
       "practice_area": "Beachfront Properties, Vacation Homes",
-      "description": "Olivia has a passion for helping clients find the perfect vacation home by the beach.",
+      "description": "More than 30 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "https://i.ibb.co.com/RTSNKtQ3/agent-08.webp"
     },
     {
@@ -113,7 +113,7 @@
       "email": "william.anderson@example.com",
       "address": "555 Redwood St, Denver, CO",
       "practice_area": "Commercial Leasing, Retail Spaces",
-      "description": "William helps businesses secure prime commercial and retail spaces.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training..",
       "image": "https://i.ibb.co.com/dwJxvkp6/agent-01.webp"
     },
     {
@@ -126,7 +126,7 @@
       "email": "sophia.thomas@example.com",
       "address": "666 Aspen St, Las Vegas, NV",
       "practice_area": "Luxury Homes, Gated Communities",
-      "description": "Sophia is a dedicated agent specializing in exclusive, high-end properties.",
+      "description": "More than 40 years ago, our company’s namesake, Line Themes, pioneered a revolutionary sales training program for businesses of every size. Today, our proven sales training program has made us a leader in sales and management training.",
       "image": "https://i.ibb.co.com/Ps0TJNxy/agent-03.webp"
     }
   ]
