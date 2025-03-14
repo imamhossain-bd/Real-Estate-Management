@@ -134,7 +134,7 @@ const SingleAgent = () => {
                         <h2 className="text-3xl font-bold mb-8">Contact for any Inquiry</h2>
                         <hr />
                         <div className='mt-8'>
-                            <div className='flex items-center gap-10'>
+                            <div className='flex items-center gap-11'>
                                 <div>
                                     <label className='text-lg font-semibold' htmlFor="">Name *</label> <br />
                                     <input type="text" name="" id="" placeholder='Name' className='px-3 w-[28rem] rounded-md py-3 outline-none border border-slate-400 mt-3 text-lg' />
