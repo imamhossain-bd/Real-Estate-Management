@@ -19,3 +19,7 @@ Route::prefix('/v1')->group(function () {
 
 Route::get('/properties', [PropertyController::class, 'index']);
 Route::post('/properties', [PropertyController::class, 'store']);
+
+
+
+
