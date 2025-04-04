@@ -1,14 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { MapContainer, TileLayer } from "react-leaflet";
 
 
 const Contact = () => {
     return (
         <div>
             <div className='relative'>
-                <img className='bg-cover bg-no-repeat w-full h-[28rem]' src="https://i.ibb.co.com/mrmkZWPD/agent-breadcrumb.png" alt="" />
+                <img className='bg-cover bg-no-repeat w-full h-[28rem]' src="https://i.ibb.co.com/yF12C1N2/contact-breadcrumb.png" alt="" />
                 <div className='absolute inset-0 bg-gradient-to-r from-black/100 opacity-85 to-transparent'></div>
                 <div className='absolute flex items-center left-[45rem] top-1/2 transform -translate-y-1/2 text-5xl text-white font-bold'>
                     <h2>Our Contact</h2>
@@ -51,18 +50,36 @@ const Contact = () => {
             </div>
 
             <div>
-                <div className="w-full max-w-5xl p-4 bg-white shadow-lg rounded-xl">
-                    <h2 className="text-2xl font-bold text-center mb-4">World Map</h2>
-                    <MapContainer
-                        center={[20, 0]} // Centered on the world
-                        zoom={2} // Zoomed out for a full world view
-                        className="h-96 w-full rounded-xl"
-                    >
-                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                    </MapContainer>
+                {/* Contact Map */}
+                <div className="w-full p-4 bg-white shadow-lg rounded-xl">
+
                 </div>
             </div>
-            
+
+            <div className='px-14 mt-12 mb-10'>
+                <div className='w-full bg-[#f7fcff] h-auto rounded-lg shadow-lg'>
+                    <div>
+                        <h2 className='ml-20 text-2xl pt-10 font-semibold'>Get in touch</h2>
+                    </div>
+                    <hr className='mt-8 border border-[#d2d2d2]' />
+
+                    <div>
+                        <div>
+                            <div className='flex gap-[28rem]'>
+                                <label htmlFor="">Name</label>
+                                <label htmlFor="">Email</label>
+                            </div>
+                            <br />
+                            <input type="text" name="" id="" placeholder='Name' className='px-3 w-[28rem] rounded-md py-3 outline-none border border-slate-400 mt-5 text-lg' />
+
+                            <input type="email" name="" id="" placeholder='Email Address' className='px-3 w-[28rem] rounded-md py-3 outline-none border border-slate-400 mt-5 ml-7 text-lg' />
+                        </div>
+                        <br />
+                        <textarea name="" id="" placeholder='Message' cols="106" rows="5" className='mt-5 rounded-md border outline-none border-slate-400 px-3 py-3 text-lg'></textarea>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 };
