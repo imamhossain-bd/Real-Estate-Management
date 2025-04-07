@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
 const Contact = () => {
@@ -132,8 +133,18 @@ const Contact = () => {
                             <div>
                                 <h2 className='text-white mt-3 text-2xl ml-8 font-semibold'>Follow Us</h2>
                             </div>
-                            <div className='mt-7 ml-7'>
-                                <div className='w-14 h-14 text-4xl rounded-full border-2 border-[#b9b9b9]'><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47062 14 5.5 16 5.5H17.5V2.1401C17.1743 2.09685 15.943 2 14.6429 2C11.9284 2 10 3.65686 10 6.69971V9.5H7V13.5H10V22H14V13.5Z"></path></svg>
+                            <div className='mt-7 ml-7 flex gap-5'>
+                                <div className='w-14 h-14 rounded-full border-2 transition-all duration-500 cursor-pointer text-[#fff] hover:text-[#ff5a3c] hover:bg-[#fff] border-[#b9b9b9]'>
+                                    <FontAwesomeIcon icon={faFacebookF} className='ml-[17px] text-2xl mt-[14px]'/>
+                                </div>
+                                <div className='w-14 h-14 rounded-full border-2 transition-all duration-500 cursor-pointer text-[#fff] hover:text-[#ff5a3c] hover:bg-[#fff] border-[#b9b9b9]'>
+                                    <FontAwesomeIcon icon={faLinkedinIn} className='ml-[15px] text-2xl mt-[14px] '/>
+                                </div>
+                                <div className='w-14 h-14 rounded-full border-2 transition-all duration-500 cursor-pointer text-[#fff] hover:text-[#ff5a3c] hover:bg-[#fff] border-[#b9b9b9]'>
+                                    <FontAwesomeIcon icon={faInstagram} className='ml-[15px] text-2xl mt-[14px]'/>
+                                </div>
+                                <div className='w-14 h-14 rounded-full border-2 transition-all duration-500 cursor-pointer text-[#fff] hover:text-[#ff5a3c] hover:bg-[#fff] border-[#b9b9b9]'>
+                                    <FontAwesomeIcon icon={faTwitter} className='ml-[14px] text-2xl mt-[14px]'/>
                                 </div>
                             </div>
                         </div>
